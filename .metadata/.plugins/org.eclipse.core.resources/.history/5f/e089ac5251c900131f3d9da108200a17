@@ -1,0 +1,14 @@
+package ch.phischa;
+
+public class GUI {
+
+	public GUI()
+	{
+		createFrame();
+	}
+	
+	private createFrame()
+	{
+		
+	}
+}

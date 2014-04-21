@@ -1,0 +1,50 @@
+package ch.phischa;
+
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+
+public class GUI {
+
+	private JFrame mainFrame;
+	
+	public GUI()
+	{
+		createFrame();
+	}
+	
+	private void createFrame()
+	{
+		JMenuBar menubar = createMenuBar();
+		
+		mainFrame = new JFrame("Lucene Search Engine");
+		
+		mainFrame.add(menubar);
+		
+		mainFrame.setSize(300,400);
+		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		mainFrame.setVisible(true);
+	}
+	
+	private JMenuBar createMenuBar()
+	{
+		JMenuBar menubar = new JMenuBar();
+		JMenu datei, einstellungen;
+		JMenuItem schliessen,pfadSetting;
+		
+		datei = new JMenu("Datei");
+		einstellungen = new JMenu("Einstellungen");
+		
+		schliessen = new JMenuItem("Schliessen");
+		pfadSetting = new JMenuItem("Pfad setzen");
+		
+		datei.add(schliessen);
+		einstellungen.add(pfadSetting);
+		
+		menubar.add(datei);
+		menubar.add(einstellungen);
+		
+		return menubar;
+	}
+}

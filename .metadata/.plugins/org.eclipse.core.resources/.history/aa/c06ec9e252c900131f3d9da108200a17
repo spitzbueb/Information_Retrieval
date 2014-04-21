@@ -1,0 +1,29 @@
+package ch.phischa;
+
+import javax.swing.JFrame;
+import javax.swing.JMenuBar;
+
+public class GUI {
+
+	private JFrame mainFrame;
+	
+	public GUI()
+	{
+		createFrame();
+	}
+	
+	private void createFrame()
+	{
+		JMenuBar menubar = createMenuBar();
+		
+		mainFrame = new JFrame("Lucene Search Engine");
+		mainFrame.setSize(300,400);
+		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		mainFrame.setVisible(true);
+	}
+	
+	private JMenuBar createMenuBar()
+	{
+		
+	}
+}

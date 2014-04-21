@@ -1,0 +1,21 @@
+package ch.phischa;
+
+import javax.swing.JFrame;
+
+public class GUI {
+
+	private JFrame mainFrame;
+	
+	public GUI()
+	{
+		createFrame();
+	}
+	
+	private void createFrame()
+	{
+		mainFrame = new JFrame("Lucene Search Engine");
+		mainFrame.setSize(300,400);
+		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		mainFrame.setVisible(true);
+	}
+}
