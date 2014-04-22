@@ -1,0 +1,9 @@
+package ch.phischa;
+
+public class Index {
+	
+	public Index(String pfad)
+	{
+		
+	}
+}

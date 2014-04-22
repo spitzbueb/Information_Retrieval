@@ -1,0 +1,69 @@
+package ch.phischa;
+
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class GUI {
+	
+	private JFrame mainFrame;
+	private JTextField suche;
+	private JButton sucheButton;
+	
+	public GUI()
+	{
+		createFrame();
+	}
+	
+	private void createFrame()
+	{
+		mainFrame = new JFrame("Lucene Search Engine");
+		JMenuBar menubar = createMenuBar();
+		
+		suche = new JTextField(20);
+		sucheButton = new JButton("Suche");
+
+		JPanel northPanel = new JPanel();
+		northPanel.add(suche);
+		northPanel.add(sucheButton);
+		
+		mainFrame.add(northPanel,BorderLayout.NORTH);
+				
+		mainFrame.setJMenuBar(menubar);
+		
+		mainFrame.pack();
+		mainFrame.setSize(700,800);
+		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		mainFrame.setVisible(true);
+	}
+	
+	private JMenuBar createMenuBar()
+	{
+		JMenuBar menubar = new JMenuBar();
+		JMenu datei, einstellungen;
+		JMenuItem schliessen,pfadSetting;
+		
+		datei = new JMenu("Datei");
+		einstellungen = new JMenu("Einstellungen");
+		
+		schliessen = new JMenuItem("Schliessen");
+		pfadSetting = new JMenuItem("Pfad setzen");
+		
+		datei.add(schliessen);
+		einstellungen.add(pfadSetting);
+		
+		menubar.add(datei);
+		menubar.add(einstellungen);
+		
+		return menubar;
+	}
+}

@@ -1,0 +1,26 @@
+package ch.phischa;
+
+import java.io.File;
+
+public class Index {
+	
+	public Index(String pfad)
+	{
+		String pfadIndex = pfad + File.separator + "Index";
+		
+		long start = System.currentTimeMillis();
+		
+		int numIndexed;
+		
+		try{
+			numIndexed = index(pfad,new TextFileFilter());
+		} finally {
+			close();
+		}
+		
+		long end = System.currentTimeMillis();
+		
+		System.out.println("Indexed: " + numIndexed + " Files in " + (end - start) + "milliseconds");
+		
+	}
+}

@@ -1,0 +1,13 @@
+package ch.phischa;
+
+import java.io.File;
+
+public class Index {
+	
+	public Index(String pfad)
+	{
+		String pfadIndex = pfad + File.separator + "Index";
+		
+		System.out.println(pfadIndex);
+	}
+}

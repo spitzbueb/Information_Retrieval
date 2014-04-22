@@ -1,0 +1,43 @@
+package ch.phischa;
+
+import java.io.File;
+
+import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.index.IndexWriter;
+import org.apache.lucene.index.IndexWriterConfig;
+import org.apache.lucene.store.Directory;
+import org.apache.lucene.store.FSDirectory;
+import org.apache.lucene.util.Version;
+
+public class Index {
+	
+	private IndexWriter writer;
+	
+	public Index(String pfad)
+	{
+		String pfadIndex = pfad + File.separator + "Index";
+		
+		long start = System.currentTimeMillis();
+		
+		int numIndexed;
+		
+		try{
+			numIndexed = index(pfad,new TextFileFilter());
+		} finally {
+			close();
+		}
+		
+		long end = System.currentTimeMillis();
+		
+		System.out.println("Indexed: " + numIndexed + " Files in " + (end - start) + "milliseconds");
+	
+		Directory dir = FSDirectory.open(new File(pfad));
+		
+		writer = new IndexWriter(dir,new StandardAnalyzer(Version.LUCENE_CURRENT),true,IndexWriter.MaxFieldLength.UNLIMITED); 
+		
+	}
+	
+	
+	
+
+}
