@@ -25,6 +25,7 @@
 <fullyQualifiedTypeName name="org.apache.lucene.document.Document"/>
 <fullyQualifiedTypeName name="org.apache.lucene.document.Field"/>
 <fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="org.apache.lucene.index.IndexWriter.MaxFieldLength"/>
 <fullyQualifiedTypeName name="org.apache.lucene.document.Field.Store"/>
 <fullyQualifiedTypeName name="org.apache.lucene.document.Field.Index"/>
 </qualifiedTypeNameHistroy>

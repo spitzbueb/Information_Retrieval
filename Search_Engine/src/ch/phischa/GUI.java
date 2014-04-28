@@ -69,7 +69,9 @@ public class GUI {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO Auto-generated method stub
-				new Index(pfadFeld.getText().toString());
+				Index indexer = new Index(pfadFeld.getText().toString());
+				long dauerZeit = indexer.getTime();
+				dauer.setText(String.valueOf(dauerZeit) + " Millisekunden");
 			}
 			
 		});

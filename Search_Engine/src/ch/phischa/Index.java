@@ -8,6 +8,7 @@ import java.io.IOException;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
+import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.store.Directory;
@@ -16,89 +17,80 @@ import org.apache.lucene.util.Version;
 
 public class Index {
 	
-	private IndexWriter writer;
+	public IndexWriter writer;
+	long dauer;
 	
 	public Index(String pfad)
 	{
 		String pfadIndex = pfad + File.separator + "Index";
+		int numIndexed = 0;
+		try {
+			Indexer(pfadIndex);
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
 		long start = System.currentTimeMillis();
-		
-		int numIndexed;
-		
+
 		try{
-			numIndexed = index(pfad,new TextFilesFilter());
+			numIndexed = index(pfad, new MPFileFilter());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		} finally {
-			try {
-				close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			close();
 		}
 		
 		long end = System.currentTimeMillis();
 		
-		System.out.println("Indexed: " + numIndexed + " Files in " + (end - start) + "milliseconds");
-	
-		Directory dir = null;
-		try {
-			dir = FSDirectory.open(new File(pfad));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		StandardAnalyzer analyzer = new StandardAnalyzer(Version.LUCENE_CURRENT);
-		IndexWriterConfig config = new IndexWriterConfig(Version.LUCENE_CURRENT,analyzer);
-		
-		try {
-			writer = new IndexWriter(dir,config);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		System.out.println("Indexing " + numIndexed + " in " + (end - start) + " Milliseconds");
+		dauer = end - start;
 	}
 	
-	public void close() throws IOException
+	@SuppressWarnings("deprecation")
+	public void Indexer(String indexDir) throws IOException
 	{
-		writer.close();
+		Directory dir = FSDirectory.open(new File(indexDir));
+		writer = new IndexWriter(dir,new StandardAnalyzer(Version.LUCENE_30),true,IndexWriter.MaxFieldLength.UNLIMITED);
 	}
 	
-	public int index(String dataDir, FileFilter filter)
+	public void close()
+	{
+		try {
+			writer.close();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public int index(String dataDir, FileFilter filter) throws Exception
 	{
 		File[] files = new File(dataDir).listFiles();
 		
-		for (File f:files)
+		for(File f:files)
 		{
-			if(!f.isDirectory() && !f.isHidden() && f.exists() && f.canRead() && (filter == null || filter.accept(f)))
+			if(!f.isDirectory() && !f.isHidden() && f.canRead() && f.exists() && (filter == null || filter.accept(f)))
 			{
-				try {
-					indexFile(f);
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				indexFile(f);
 			}
 		}
 		
 		return writer.numDocs();
 	}
 	
-	private static class TextFilesFilter implements FileFilter
+	private static class MPFileFilter implements FileFilter
 	{
-
-		@Override
-		public boolean accept(File pathname) {
-			// TODO Auto-generated method stub
-			return pathname.getName().toLowerCase().endsWith(".mp3");
+		public boolean accept(File path)
+		{
+			return path.getName().toLowerCase().endsWith("mp3");
 		}
-		
 	}
 	
 	protected Document getDocument(File f) throws Exception
 	{
-		Document doc = new Document();
-		doc.add(new Field("contents",new FileReader(f)));
+		Document doc =  new Document();
 		doc.add(new Field("filename",f.getName(),Field.Store.YES,Field.Index.NOT_ANALYZED));
 		doc.add(new Field("fullpath",f.getCanonicalPath(),Field.Store.YES,Field.Index.NOT_ANALYZED));
 		
@@ -110,5 +102,10 @@ public class Index {
 		System.out.println("Indexing " + f.getCanonicalPath());
 		Document doc = getDocument(f);
 		writer.addDocument(doc);
+	}
+	
+	public long getTime()
+	{
+		return dauer;
 	}
 }
