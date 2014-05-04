@@ -14,6 +14,17 @@ import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.Version;
+import org.jaudiotagger.audio.AudioFile;
+import org.jaudiotagger.audio.AudioFileIO;
+import org.jaudiotagger.audio.AudioHeader;
+import org.jaudiotagger.audio.mp3.MP3AudioHeader;
+import org.jaudiotagger.audio.mp3.MP3File;
+import org.jaudiotagger.tag.FieldKey;
+import org.jaudiotagger.tag.Tag;
+import org.jaudiotagger.tag.id3.AbstractID3v2Tag;
+import org.jaudiotagger.tag.id3.ID3v1Tag;
+import org.jaudiotagger.tag.id3.ID3v24Frames;
+import org.jaudiotagger.tag.id3.ID3v24Tag;
 
 public class Index {
 	
@@ -90,15 +101,26 @@ public class Index {
 	
 	protected Document getDocument(File f) throws Exception
 	{
+		AudioFile audioFile = AudioFileIO.read(f);
+		Tag tag = audioFile.getTag();
+		AudioHeader header = audioFile.getAudioHeader();
+		
+		System.out.println(tag.getFirst(FieldKey.ARTIST));
+		
 		Document doc =  new Document();
 		doc.add(new Field("filename",f.getName(),Field.Store.YES,Field.Index.NOT_ANALYZED));
 		doc.add(new Field("fullpath",f.getCanonicalPath(),Field.Store.YES,Field.Index.NOT_ANALYZED));
+		doc.add(new Field("Künstler",tag.getFirst(FieldKey.ARTIST),Field.Store.YES,Field.Index.ANALYZED));
+		doc.add(new Field("Album",tag.getFirst(FieldKey.ALBUM),Field.Store.YES,Field.Index.ANALYZED));
+		doc.add(new Field("Titel",tag.getFirst(FieldKey.TITLE),Field.Store.YES,Field.Index.ANALYZED));
+		doc.add(new Field("Jahr",tag.getFirst(FieldKey.YEAR),Field.Store.YES,Field.Index.ANALYZED));
 		
 		return doc;
 	}
 	
 	private void indexFile(File f) throws Exception
 	{
+		System.out.println(f.getName());
 		System.out.println("Indexing " + f.getCanonicalPath());
 		Document doc = getDocument(f);
 		writer.addDocument(doc);
