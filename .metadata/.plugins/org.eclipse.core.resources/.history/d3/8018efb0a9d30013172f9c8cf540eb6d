@@ -27,12 +27,12 @@ public class Searcher {
 		private static long dauer;
 		private static ArrayList<Document> results = new ArrayList<Document>();
 	
-		public Searcher(String pfad, String query, String analyzerArt)
+		public Searcher(String pfad, String query)
 		{
 			String indexDir = pfad + File.separator + "Index";
 			
 			try {
-				search(indexDir,query, analyzerArt);
+				search(indexDir,query);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -49,23 +49,21 @@ public class Searcher {
 			@SuppressWarnings("resource")
 			IndexSearcher is = new IndexSearcher(dir);
 			
-			MultiFieldQueryParser parser;
-			
 			if(analyzerArt.equals("Whitespace Analyzer"))
 			{
-				parser = new MultiFieldQueryParser(Version.LUCENE_30,new String[]{"filename","Künstler","Titel","Album","Jahr"},new WhitespaceAnalyzer(Version.LUCENE_30));
+				MultiFieldQueryParser parser = new MultiFieldQueryParser(Version.LUCENE_30,new String[]{"filename","Künstler","Titel","Album","Jahr"},new WhitespaceAnalyzer(Version.LUCENE_30));
 			}
 			else if(analyzerArt.equals("Stop Analyzer"))
 			{
-				parser = new MultiFieldQueryParser(Version.LUCENE_30,new String[]{"filename","Künstler","Titel","Album","Jahr"},new StopAnalyzer(Version.LUCENE_30));
+				MultiFieldQueryParser parser = new MultiFieldQueryParser(Version.LUCENE_30,new String[]{"filename","Künstler","Titel","Album","Jahr"},new StopAnalyzer(Version.LUCENE_30));
 			}
 			else if(analyzerArt.equals("Simple Analyzer"))
 			{
-				parser = new MultiFieldQueryParser(Version.LUCENE_30,new String[]{"filename","Künstler","Titel","Album","Jahr"},new SimpleAnalyzer(Version.LUCENE_30));
+				MultiFieldQueryParser parser = new MultiFieldQueryParser(Version.LUCENE_30,new String[]{"filename","Künstler","Titel","Album","Jahr"},new SimpleAnalyzer(Version.LUCENE_30));
 			}
 			else
 			{
-				parser = new MultiFieldQueryParser(Version.LUCENE_30,new String[]{"filename","Künstler","Titel","Album","Jahr"},new StandardAnalyzer(Version.LUCENE_30));
+				MultiFieldQueryParser parser = new MultiFieldQueryParser(Version.LUCENE_30,new String[]{"filename","Künstler","Titel","Album","Jahr"},new StandardAnalyzer(Version.LUCENE_30));
 			}
 			
 			

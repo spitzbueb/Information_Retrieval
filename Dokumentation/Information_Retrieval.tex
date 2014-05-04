@@ -1,0 +1,56 @@
+% Seminar Information Retrieval Philipp Schalcher
+% Betreuer: Ruxandra Domenig
+% Thema: Evaluierung der Retrieval-Leistung einer Search Engine am Beispiel einer privaten MP3-Sammlung
+
+\documentclass[12pt,a4paper,ngerman]{report}
+\setlength{\parindent}{0pt}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{a4wide}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage[final]{listings}
+\usepackage{color}
+\usepackage{amsmath}
+\author{Philipp Schalcher}
+\title{Evaluierung der Retrieval-Leistung einer Search Engine am Beispiel einer privaten MP3-Sammlung}
+\date{\today}
+
+\begin{document}
+%\maketitle
+\input{./title.tex}
+\chapter*{Danksagung}
+\tableofcontents
+\begin{abstract}
+
+\end{abstract}
+\chapter{Einleitung}
+In der heutigen Zeit wird der Mensch von einer Fülle an Informationen überflutet. Würde er nicht gewisse Eindrücke selber filtern, könnte das zu einem Kollaps führen. Der Mensch hat das Glück, solche Dinge von der Natur eingebaut zu haben. Im Gegensatz zum Menschen besitzen Informationssysteme keine integrierten Filter. Das beste Beispiel hierfür ist Google. Es gibt eine riesige Menge an Daten, die der Suchmaschine ihr Wissen verleiht.
+\\
+\\
+Lucene ist eine Bibliothek, welche in verschiedene Projekte eingebaut werden kann, um so eine mächtige Suchmaschine auf Basis von Indexen zu bekommen. Lucene enthält alle relevanten Funktionen, die benötigt werden, um Informationen zu durchsuchen. Hier liegt die Herausforderung, eine Suchmaschine für ID3-Tags von MP3-Dateien zu bauen, da Lucene hauptsächlich für Textdateien (PDF,TXT,DOCX,eBooks,usw.) genutzt wird. Für MP3-Dateien stehen andere Probleme an (Wie extrahiere ich die ID3-Tags aus einer MP3-Datei). 
+\\
+\\
+Diese Arbeit soll die Information Retrieval Leistung der Suchengine Lucene analysieren. Darin enthalten sind eine Programmierung einer kleinen Suchmaschine, die MP3-Dateien innerhalb eines Ordners indexiert und danach durchsucht. Dabei beschränke ich mich in der praktischen Arbeit auf das indexieren der ID3-Tags. Diese Arbeit soll nicht als Anleitung zur Erstellung einer Suchmaschine dienen!
+\\
+\\
+Da Lucene natürlich auch den Inhalt einer Datei analysiert, muss diese Arbeit ein bisschen angepasst werden. Da MP3-Dateien keinen Text als Inhalt haben, möchte ich daher nur theoretisch aufzeigen, wie anhand von Teilen eines Liedes das entsprechende Lied gesucht werden kann. Dies zu programmieren sprengt den Rahmen der Arbeit, somit werde ich am Beispiel von Shazam nur eine theoretische Lösung aufzeigen.
+\chapter{Hauptteil}
+\section*{Lucene}
+Was ist Lucene? Dies ist die erste Frage, die ich mir zu Beginn der Arbeit gestellt habe. Da mir das Produkt gänzlich unbekannt war, galt es zuerst Informationen zu sammeln.\\
+\\
+Apache Lucene eine Suchengine, die sich auf Text und eine hohe Performance spezialisiert hat. Dabei ist die Engine mittlerweile in verschiedene Sprachen übersetzt worden. Der Apache Lucene Core ist der Hauptteil der Software und ist in Java geschrieben. Das beste an Lucene ist wohl, dass es gratis zur Verfügung steht. Somit kann jeder Entwickler eine mächtige Suchmaschine in seine Programme einbauen. \\
+\\
+Bei einer Suchmaschine liegen die Stärken im Resultat welches geliefert wird. Lucene bietet auch hier wieder einige Funktionen, die das Endergebnis schnell und korrekt ergeben sollen. Dazu gehören:
+\begin{itemize}
+	\item Ranked Searching - Die besten Resultate werden als Erste zurückgegeben.
+	\item Verschiedene Query-Typen
+	\item Feldsuche (Hier Titel, Album, Künstler, Jahr).
+	\item Mehrfache Indexe durchsuchen mit zusammengefasstem Ergebnis.
+	\item Schnell
+	\item Speichereffizient
+	\item Tippfehler-tolerant
+\end{itemize}
+Mit diesen und weiteren Gimmicks wird Lucene auf der Webseite \url{lucene.apache.org/core/} angepriesen. Für meine Arbeit habe ich die Bibliothek in der Version 3.6.2 verwendet, da meine Quelle ebenfalls mit einer 3er-Version gearbeitet hat.
+\section*{Information Retrieval}
+\end{document}

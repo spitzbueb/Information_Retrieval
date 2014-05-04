@@ -5,10 +5,6 @@ import java.io.FileFilter;
 import java.io.FileReader;
 import java.io.IOException;
 
-import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.SimpleAnalyzer;
-import org.apache.lucene.analysis.StopAnalyzer;
-import org.apache.lucene.analysis.WhitespaceAnalyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
@@ -38,10 +34,21 @@ public class Index {
 	public Index(String pfad, String analyzerArt)
 	{
 		
+		switch (analyzerArt) {
+		case "Standard Analyzer":
+			System.out.println("Chose Standard Analyzer");
+		case "Whitespace Analyzer":
+			System.out.println("Chose Whitespace Analyzer");
+		case "Stop Analyzer":
+			System.out.println("Chose Stop Analyzer");
+		case "Simple Analyzer":
+			System.out.println("Chose Simple Analyzer");
+		}
+		
 		String pfadIndex = pfad + File.separator + "Index";
 		int numIndexed = 0;
 		try {
-			Indexer(pfadIndex,analyzerArt);
+			Indexer(pfadIndex);
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -65,29 +72,10 @@ public class Index {
 	}
 	
 	@SuppressWarnings("deprecation")
-	public void Indexer(String indexDir, String analyzerArt) throws IOException
+	public void Indexer(String indexDir) throws IOException
 	{
 		Directory dir = FSDirectory.open(new File(indexDir));
-		
-		if(analyzerArt.equals("Whitespace Analyzer"))
-		{
-			writer = new IndexWriter(dir,new WhitespaceAnalyzer(Version.LUCENE_30),true,IndexWriter.MaxFieldLength.UNLIMITED);
-		}
-		else if(analyzerArt.equals("Stop Analyzer"))
-		{
-			writer = new IndexWriter(dir,new StopAnalyzer(Version.LUCENE_30),true,IndexWriter.MaxFieldLength.UNLIMITED);
-		}
-		else if(analyzerArt.equals("Simple Analyzer"))
-		{
-			writer = new IndexWriter(dir,new SimpleAnalyzer(Version.LUCENE_30),true,IndexWriter.MaxFieldLength.UNLIMITED);
-		}
-		else
-		{
-			writer = new IndexWriter(dir,new StandardAnalyzer(Version.LUCENE_30),true,IndexWriter.MaxFieldLength.UNLIMITED);
-		}
-		
-		
-		
+		writer = new IndexWriter(dir,new StandardAnalyzer(Version.LUCENE_30),true,IndexWriter.MaxFieldLength.UNLIMITED);
 	}
 	
 	public void close()

@@ -27,12 +27,12 @@ public class Searcher {
 		private static long dauer;
 		private static ArrayList<Document> results = new ArrayList<Document>();
 	
-		public Searcher(String pfad, String query, String analyzerArt)
+		public Searcher(String pfad, String query)
 		{
 			String indexDir = pfad + File.separator + "Index";
 			
 			try {
-				search(indexDir,query, analyzerArt);
+				search(indexDir,query);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

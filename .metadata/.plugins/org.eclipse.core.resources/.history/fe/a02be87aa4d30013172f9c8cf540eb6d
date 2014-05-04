@@ -81,8 +81,8 @@ public class GUI {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO Auto-generated method stub
-				String analyzer = bgroup.getSelection().getActionCommand();				
-				Searcher searcher = new Searcher(pfadFeld.getText().toString(),suche.getText().toString(),analyzer);
+								
+				Searcher searcher = new Searcher(pfadFeld.getText().toString(),suche.getText().toString());
 				dauer.setText(String.valueOf(searcher.getDauer()) + " Millisekunden");
 				ArrayList<Document> results = searcher.getResult();
 				String cols[] = {"Ergebnisse"};
@@ -119,8 +119,7 @@ public class GUI {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO Auto-generated method stub
-				String analyzer = bgroup.getSelection().getActionCommand();
-				Index indexer = new Index(pfadFeld.getText().toString(),analyzer);
+				Index indexer = new Index(pfadFeld.getText().toString());
 				long dauerZeit = indexer.getTime();
 				dauer.setText(String.valueOf(dauerZeit) + " Millisekunden");
 			}
@@ -138,11 +137,6 @@ public class GUI {
 		JRadioButtonMenuItem wsButton = new JRadioButtonMenuItem("Whitespace Analyzer", false);
 		JRadioButtonMenuItem stButton = new JRadioButtonMenuItem("Stop-Analyzer",false);
 		JRadioButtonMenuItem smButton = new JRadioButtonMenuItem("Simple Analyzer", false);
-		
-		saButton.setActionCommand("Standard Analyzer");
-		wsButton.setActionCommand("Whitespace Analyzer");
-		stButton.setActionCommand("Stop Analyzer");
-		smButton.setActionCommand("Simple Analyzer");
 		
 		bgroup = new ButtonGroup();
 		bgroup.add(saButton);

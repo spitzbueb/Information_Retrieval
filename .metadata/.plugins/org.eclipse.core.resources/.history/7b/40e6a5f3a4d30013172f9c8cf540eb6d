@@ -81,8 +81,8 @@ public class GUI {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO Auto-generated method stub
-				String analyzer = bgroup.getSelection().getActionCommand();				
-				Searcher searcher = new Searcher(pfadFeld.getText().toString(),suche.getText().toString(),analyzer);
+								
+				Searcher searcher = new Searcher(pfadFeld.getText().toString(),suche.getText().toString());
 				dauer.setText(String.valueOf(searcher.getDauer()) + " Millisekunden");
 				ArrayList<Document> results = searcher.getResult();
 				String cols[] = {"Ergebnisse"};
@@ -120,7 +120,8 @@ public class GUI {
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO Auto-generated method stub
 				String analyzer = bgroup.getSelection().getActionCommand();
-				Index indexer = new Index(pfadFeld.getText().toString(),analyzer);
+				System.out.println(analyzer);
+				Index indexer = new Index(pfadFeld.getText().toString());
 				long dauerZeit = indexer.getTime();
 				dauer.setText(String.valueOf(dauerZeit) + " Millisekunden");
 			}

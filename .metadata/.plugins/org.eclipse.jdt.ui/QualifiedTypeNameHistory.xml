@@ -50,4 +50,10 @@
 <fullyQualifiedTypeName name="javax.swing.JScrollPane"/>
 <fullyQualifiedTypeName name="org.apache.lucene.document.Document"/>
 <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="javax.swing.JRadioButton"/>
+<fullyQualifiedTypeName name="javax.swing.JRadioButtonMenuItem"/>
+<fullyQualifiedTypeName name="javax.swing.ButtonGroup"/>
+<fullyQualifiedTypeName name="org.apache.lucene.analysis.WhitespaceAnalyzer"/>
+<fullyQualifiedTypeName name="org.apache.lucene.analysis.StopAnalyzer"/>
+<fullyQualifiedTypeName name="org.apache.lucene.analysis.SimpleAnalyzer"/>
 </qualifiedTypeNameHistroy>
