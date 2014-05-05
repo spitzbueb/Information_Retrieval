@@ -60,5 +60,62 @@ Dieses Zitat bezeichnet sehr gut um was es bei Information Retrieval geht. Die M
 \begin{quote}
 Information retrieval deals with the representation, storage, organization of, and access to information items such as documents, Web pages, online catalogs, structured and semi-structured records, multimedia objects. The representation and organization of the information items should be such as to provide the users with easy access to information of their interest. - Buch: Modern Information Retrieval
 \end{quote}
-Zu Beginn war Information Retrieval nur eine Kategorie, die für Bibliothekare und Informationsexperten interessant war. Dieser Umstand änderte sich aber schlagartig, als das Internet aufkam. Informationen waren nun zugänglich und konnten von fast jedem Menschen abgerufen werden. Mit dem Internet wurde es wichtiger, gute Ergebnisse beim Suchen nach Informationen zu bekommen. Information Retrieval hatte die breite Masse erreicht.
+Zu Beginn war Information Retrieval nur eine Kategorie, die für Bibliothekare und Informationsexperten interessant war. Dieser Umstand änderte sich aber schlagartig, als das Internet aufkam. Informationen waren nun zugänglich und konnten von fast jedem Menschen abgerufen werden. Mit dem Internet wurde es wichtiger, gute Ergebnisse beim Suchen nach Informationen zu bekommen. Information Retrieval hatte die breite Masse erreicht.\\
+\\
+Ein Grundproblem bei IR-Systemen ist, welche Informationen für die gewünschte Suche überhaupt relevant sind. Wie soll die Software entscheiden, welche Informationen am besten auf die Anforderungen des Benutzers zutreffen? Dabei gibt es verschiedene Möglichkeiten. Ein Beispiel ist das sogenannte Ranking. Dabei wird einem Dokument, welches häufiger erscheint, ein höheres Ranking gegeben. Somit weiss die Suchmaschine, dass es wahrscheinlicher ist, dass in diesem Dokument gesuchte Informationen zu finden sind, die mit den Anforderungen übereinstimmen.\\
+Eine weitere Möglichkeit besteht in der örtlichen Ablage von Informationen. So können die \textquotedblleft am nächsten liegenden\textquotedblright Informationen auch die richtigen sein. Suche ich zum Beispiel in Google nach einem Detailhändler, möchte ich natürlich die Händler im Ergebnis erhalten, die am nächsten zu mir liegen.\\
+Als Drittes ist die Grösse eines Dokumentes ebenfalls eine Variable. So können kleine Dokumente bevorzugt werden, da sie schnell heruntergeladen und veranschaulicht werden können.
+\newpage
+Information Retrieval Systeme müssen komplexe Anforderungen erfüllen. Mit den oben genannten drei Beispielen für Ergebnissen, folgt der Schluss, dass IR-Systeme nie die eine perfekte Lösung anbieten können. Die Anfragen sind zu komplex um alle möglichen Varianten in eine Suchmaschine zu integrieren.\\
+\\
+Lucene ist genau solch ein IR-System. Dieses System soll nun analysiert werden. Darunter fällt die Analyse der verschiedenen Analyzer. Konkret handelt es sich um den Standard Analyzer, den Whitespace Analyzer, den Stop Analyzer und den Simple Analyzer. Hier möchte ich mich darauf konzentrieren, wie genau die Informationen in den Index gespeichert werden. Ein ebenfalls wichtiger Faktor ist die Zeit. Einerseits die Dauer der Indexerstellung und danach die Dauer der Suche mit den verschiedenen Einstellungen. Als Letztes möchte ich mich um die Analyse des Ergebnisses kümmern, wobei ich eine Testmenge an MP3 benutze um damit die tatsächlichen Suchergebnisse mit der erwarteten Menge zu vergleichen.
+\section*{Lucene Search Engine}
+Das entwickelte Programm hat den Namen \textquotedblleft Lucene Search Engine\textquotedblright und wurde in Java entwickelt. Im Programm kann unter dem Punkt \textquotedblleft Pfad\textquotedblright der Ablageort der MP3-Dateien angegeben werden. Mit dem Button Index wird dann in diesem Pfad ein Ordner Index erstellt, in welchem der Lucene-Index erstellt wird. Dabei durchsucht das Programm alle MP3-Dateien im angegeben Pfad, auch in Unterordnern. Aus diesen Dateien werden dann die Informationen Titel, Album, Künstler, Jahr, Pfad und Dateiname extrahiert und in den Index geschrieben. Gesucht wird dann in den Feldern Titel, Album, Künstler, Jahr und Dateiname. Als Ergebnis wird der Pfad zur entsprechenden Dateien ausgegeben.
+\newpage
+\subsection*{Das GUI}
+In diesem Abschnitt möchte ich ganz kurz die grafische Benutzeroberfläche erläutern. Ich gehe nicht weiter auf die Programmierung ein, da dies nur ein kleiner, eher unwichtiger Teil der Search Engine ist.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=10cm]{img/Lucene_Search_Engine_1.jpg}
+\caption{GUI des Programmes\protect\footnotemark}
+\end{figure}
+\footnotetext{Quelle: Screenshot}
+Zuerst betrachten wir die Menüleiste. Unter dem Punkt Datei ist nicht weiteres zu finden als ein Punkt \textquotedblleft Schliessen\textquotedblright der das Programm beendet. Interessanter ist da der Punkt Einstellungen. Öffnet man diesen, erhält man eine Auswahl der 4 erwähnten Analyzer. Je nach Auswahl wird der Index auf andere Weise erstellt und die Suche durchgeführt. Es kann jeweils nur ein Analyzer ausgewählt werden. Falls man ihn ändert sollte man auch den Index neu erstellen.
+\subsubsection*{Indexieren}
+Am unteren Rand der Applikation befindet sich das Feld Pfad. Dort wird der Pfad zu den abgelegten Dateien eingefügt. Dies funktioniert für Linux wie für Windows und Mac. Sobald dies erledigt wurde, kann mit dem Knopf die Indexierung gestartet werden. Als Analyzer wird die Auswahl aus den Einstellungen genommen. Der Index wird im gleichen Pfad erstellt und in einem Unterordner mit dem Namen \textquotedblleft Index\textquotedblright abgelegt. Dies geschieht automatisch und kann nicht geändert werden. Sobald die Indexierung beendet ist, wird auf der rechten Seite die Dauer in Millisekunden angezeigt. Je mehr MP3-Dateien indexiert werden müssen, desto länger dauert der Vorgang.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=10cm]{img/Pfadangabe.png}
+\caption{Beispiel eines angegebenen Pfades in Ubuntu\protect\footnotemark}
+\end{figure}
+\footnotetext{Quelle: Screenshot}
+Nach der Indexierung ist die Suchmaschine bereit und kann verwendet werden. Das praktische an dieser Lösung liegt darin, dass die MP3-Dateien zum Beispiel auch auf einem externen Speichermedium liegen können und der Index auf diesem Medium erstellt werden kann (gilt natürlich nicht für CD/DVDs). So kann theoretisch für jeden Ablageort eine eigener Index erstellt werden. Genaueres zur Indexierung und wie sie gelöst wurde ist im Abschnit \textquotedblleft Der Indexer\textquotedblright zu lesen.
+\subsubsection*{Suchen}
+Als Erstes muss gesagt werden, dass für die Suche das Pfadfeld weiterhin den Eintrag enthalten muss. Dies ist wichtig, da sonst die Engine nicht weiss, wo sich der Index befindet. Am oberen Rand befindet sich das Suchfeld. Der Benutzer kann hier seine Suchbegriffe eingeben, welche danach im Index gesucht werden. Wieder aktiviert man mit einem Klick auf Suche die Aktion. Sobald die Engine die Ergebnisse bekommen hat, wird die Dauer der Suche am rechten Rand angezeigt. Unterhalb des Suchfeldes wird eine Tabelle ausgegeben, welche die gefundenen Resultate beinhaltet.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=10cm]{img/suche.png}
+\caption{Beispiel eines eingegebenen Suchbegriffes\protect\footnotemark}
+\end{figure}
+\footnotetext{Quelle: Screenshot}
+Lucene bietet integrierte Funktionen, um die Suche besser auf seine Wünsche anzupassen. Hier ist eine Liste, wie man mit der Suchmaschine detaillierter suchen kann:
+\begin{itemize}
+	\item Eingabe: song1\\Sucht in den indexierten Feldern nach diesem Begriff
+	\item Eingabe: song1 song2\\Sucht in den indexierten Feldern nach den beiden Begriffen. Gibt Resultate aus, welche Begriff 1 oder Begriff 2 oder beide beinhalten.
+	\item Eingabe +song1 +song2\\Sucht in den indexierten Feldern nach den beiden Begriffen. Gibt Resultate aus, welche beide Begriffe beinhalten.
+	\item Titel:song1\\Sucht in dem indexierten Feld Titel nach dem Begriff.
+	\item Titel:song1 -Album:album1\\Sucht in den indexierten Feldern nach dem Begriff. Gibt als Resultat die Dateien zurück, welche den Titel besitzen aber nicht zum Album gehören.
+	\item (song1 OR song2) AND album1\\Sucht in den indexierten Feldern nach den Begriffen. Gibt als Resultat die Dateien zurück welche song1 oder song2 im besitzen und in album1 zu finden sind.
+	\item \textquotedblleft song1\textquotedblright \\Sucht in den indexierten Feldern nach exakt diesem Wort oder Text.
+	\item song1*\\Sucht in den indexierten Feldern nach Werten, die mit song1 beginnen.
+	\item song1$\sim$\\Sucht in den indexierten Feldern nach Werten, die ähnlich wie song1 sind.
+\end{itemize}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=7cm]{img/Lucene_Search_Engine_2.png}
+\caption{Beispiel gesuchter Begriff\protect\footnotemark}
+\end{figure}
+\footnotetext{Quelle: Screenshot}
+\subsection*{Der Indexer}
+In diesem Teil möchte ich kurz auf die Klasse Index eingehen, welche nach den MP3-Dateien sucht und die Informationen aus den ID3-Tags zieht. 
 \end{document}

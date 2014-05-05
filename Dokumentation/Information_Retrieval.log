@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.20)  5 MAY 2014 10:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.20)  5 MAY 2014 12:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -524,26 +524,66 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 46.
  [2
 
-] [3]
-(./Information_Retrieval.aux) ) 
+]
+Underfull \hbox (badness 10000) in paragraph at lines 63--68
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 69--72
+
+ []
+
+[4] <img/Lucene_Search_Engine_1.jpg, id=37, 702.625pt x 803.0pt>
+File: img/Lucene_Search_Engine_1.jpg Graphic file (type jpg)
+
+<use img/Lucene_Search_Engine_1.jpg>
+Package pdftex.def Info: img/Lucene_Search_Engine_1.jpg used on input line 79.
+(pdftex.def)             Requested size: 284.52756pt x 325.17647pt.
+
+<img/Pfadangabe.png, id=38, 373.395pt x 44.165pt>
+File: img/Pfadangabe.png Graphic file (type png)
+ <use img/Pfadangabe.png>
+Package pdftex.def Info: img/Pfadangabe.png used on input line 88.
+(pdftex.def)             Requested size: 284.52756pt x 33.65535pt.
+
+[5 <./img/Lucene_Search_Engine_1.jpg>]
+<img/suche.png, id=45, 371.3875pt x 32.12pt>
+File: img/suche.png Graphic file (type png)
+ <use img/suche.png>
+Package pdftex.def Info: img/suche.png used on input line 97.
+(pdftex.def)             Requested size: 284.52756pt x 24.60846pt.
+ [6 <./img/Pfadangabe.png> <./img/suche.png>]
+<img/Lucene_Search_Engine_2.png, id=49, 702.625pt x 803.0pt>
+File: img/Lucene_Search_Engine_2.png Graphic file (type png)
+
+<use img/Lucene_Search_Engine_2.png>
+Package pdftex.def Info: img/Lucene_Search_Engine_2.png used on input line 115.
+
+(pdftex.def)             Requested size: 199.16928pt x 227.61984pt.
+ [7 <./img/Lucene_Search_Engine_2.png>]
+[8] (./Information_Retrieval.aux) ) 
 Here is how much of TeX's memory you used:
- 4259 strings out of 494935
- 57280 string characters out of 6178122
- 123512 words of memory out of 5000000
- 7415 multiletter control sequences out of 15000+600000
- 9985 words of font info for 36 fonts, out of 8000000 for 9000
+ 4283 strings out of 494935
+ 57844 string characters out of 6178122
+ 124512 words of memory out of 5000000
+ 7434 multiletter control sequences out of 15000+600000
+ 10746 words of font info for 39 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 38i,5n,32p,562b,232s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Information_Retrieval.pdf (7 pages, 94684 bytes).
+ 38i,8n,32p,772b,247s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Information_Retrieval.pdf (12 pages, 174666 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
+ 87 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
