@@ -24,9 +24,7 @@
 <fullyQualifiedTypeName name="org.apache.lucene.store.FSDirectory"/>
 <fullyQualifiedTypeName name="org.apache.lucene.store.Directory"/>
 <fullyQualifiedTypeName name="org.apache.lucene.search.IndexSearcher"/>
-<fullyQualifiedTypeName name="org.apache.lucene.util.Version"/>
 <fullyQualifiedTypeName name="org.apache.lucene.queryParser.QueryParser"/>
-<fullyQualifiedTypeName name="org.apache.lucene.analysis.standard.StandardAnalyzer"/>
 <fullyQualifiedTypeName name="org.apache.lucene.search.Query"/>
 <fullyQualifiedTypeName name="org.apache.lucene.search.TopDocs"/>
 <fullyQualifiedTypeName name="org.apache.lucene.search.ScoreDoc"/>
@@ -41,8 +39,6 @@
 <fullyQualifiedTypeName name="org.jaudiotagger.audio.AudioFile"/>
 <fullyQualifiedTypeName name="org.jaudiotagger.audio.AudioHeader"/>
 <fullyQualifiedTypeName name="org.jaudiotagger.tag.FieldKey"/>
-<fullyQualifiedTypeName name="org.apache.lucene.document.Field.Store"/>
-<fullyQualifiedTypeName name="org.apache.lucene.document.Field.Index"/>
 <fullyQualifiedTypeName name="org.apache.lucene.queryParser.MultiFieldQueryParser"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="javax.swing.table.DefaultTableModel"/>
@@ -53,7 +49,13 @@
 <fullyQualifiedTypeName name="javax.swing.JRadioButton"/>
 <fullyQualifiedTypeName name="javax.swing.JRadioButtonMenuItem"/>
 <fullyQualifiedTypeName name="javax.swing.ButtonGroup"/>
-<fullyQualifiedTypeName name="org.apache.lucene.analysis.WhitespaceAnalyzer"/>
+<fullyQualifiedTypeName name="org.apache.lucene.document.Field.Store"/>
+<fullyQualifiedTypeName name="org.apache.lucene.document.Field.Index"/>
+<fullyQualifiedTypeName name="org.apache.lucene.analysis.Analyzer"/>
+<fullyQualifiedTypeName name="org.apache.lucene.util.Version"/>
 <fullyQualifiedTypeName name="org.apache.lucene.analysis.StopAnalyzer"/>
+<fullyQualifiedTypeName name="org.apache.lucene.analysis.WhitespaceAnalyzer"/>
+<fullyQualifiedTypeName name="org.apache.lucene.analysis.standard.StandardAnalyzer"/>
 <fullyQualifiedTypeName name="org.apache.lucene.analysis.SimpleAnalyzer"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
 </qualifiedTypeNameHistroy>

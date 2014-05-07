@@ -1,0 +1,47 @@
+package ch.phischa;
+
+import java.io.IOException;
+
+import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.SimpleAnalyzer;
+import org.apache.lucene.analysis.StopAnalyzer;
+import org.apache.lucene.analysis.WhitespaceAnalyzer;
+import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.util.Version;
+
+public class AnalyzerDemo {
+
+	private static final String[] examples = {"The quick brown fox jumped over the lazy dog","X&Y Corporation - xy@zhaw.ch"};
+	@SuppressWarnings("deprecation")
+	private static final Analyzer[] analyzers = new Analyzer[] {
+		new StandardAnalyzer(Version.LUCENE_30),new SimpleAnalyzer(), new WhitespaceAnalyzer(), new StopAnalyzer(Version.LUCENE_30)
+	};
+	
+	public AnalyzerDemo() throws IOException
+	{
+		
+		String[] strings = examples;
+		
+		for(String s:strings)
+		{
+			analyze(s);
+		}
+		
+	}
+	
+	private static void analyze(String string) throws IOException
+	{
+		System.out.println("Analyzing \"" + string + "\"");
+		
+		for(Analyzer analyzer:analyzers)
+		{
+			String name = analyzer.getClass().getSimpleName();
+			System.out.println("     " + name + "     ");
+			System.out.println("     ");
+			AnalyzerUtils.displayTokens(analyzer,string);
+			System.out.println("\n");
+		}
+	}
+	
+	
+}

@@ -4,7 +4,6 @@ import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Vector;
 
@@ -133,7 +132,7 @@ public class GUI {
 	{
 		JMenuBar menubar = new JMenuBar();
 		JMenu datei, einstellungen;
-		JMenuItem schliessen,analyzerDemo;
+		JMenuItem schliessen;
 		
 		JRadioButtonMenuItem saButton = new JRadioButtonMenuItem("Standard Analyzer", true);
 		JRadioButtonMenuItem wsButton = new JRadioButtonMenuItem("Whitespace Analyzer", false);
@@ -155,40 +154,12 @@ public class GUI {
 		einstellungen = new JMenu("Einstellungen");
 		
 		schliessen = new JMenuItem("Schliessen");
-		analyzerDemo = new JMenuItem("Analyzer Demo");
-		
-		analyzerDemo.addActionListener(new ActionListener()
-		{
-
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				// TODO Auto-generated method stub
-				try {
-					new AnalyzerDemo();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
-			
-		});
-		
-		schliessen.addActionListener(new ActionListener(){
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				mainFrame.dispose();
-			}
-			
-		});
 		
 		datei.add(schliessen);
 		einstellungen.add(saButton);
 		einstellungen.add(smButton);
 		einstellungen.add(wsButton);
 		einstellungen.add(stButton);
-		einstellungen.add(analyzerDemo);
 		
 		menubar.add(datei);
 		menubar.add(einstellungen);

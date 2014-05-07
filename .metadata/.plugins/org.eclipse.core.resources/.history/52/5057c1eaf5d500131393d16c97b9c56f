@@ -53,19 +53,19 @@ public class Searcher {
 			
 			if(analyzerArt.equals("Whitespace Analyzer"))
 			{
-				parser = new MultiFieldQueryParser(Version.LUCENE_30,new String[]{"filename","Künstler","Titel","Album","Jahr","Songtext"},new WhitespaceAnalyzer(Version.LUCENE_30));
+				parser = new MultiFieldQueryParser(Version.LUCENE_30,new String[]{"filename","Künstler","Titel","Album","Jahr"},new WhitespaceAnalyzer(Version.LUCENE_30));
 			}
 			else if(analyzerArt.equals("Stop Analyzer"))
 			{
-				parser = new MultiFieldQueryParser(Version.LUCENE_30,new String[]{"filename","Künstler","Titel","Album","Jahr","Songtext"},new StopAnalyzer(Version.LUCENE_30));
+				parser = new MultiFieldQueryParser(Version.LUCENE_30,new String[]{"filename","Künstler","Titel","Album","Jahr"},new StopAnalyzer(Version.LUCENE_30));
 			}
 			else if(analyzerArt.equals("Simple Analyzer"))
 			{
-				parser = new MultiFieldQueryParser(Version.LUCENE_30,new String[]{"filename","Künstler","Titel","Album","Jahr","Songtext"},new SimpleAnalyzer(Version.LUCENE_30));
+				parser = new MultiFieldQueryParser(Version.LUCENE_30,new String[]{"filename","Künstler","Titel","Album","Jahr"},new SimpleAnalyzer(Version.LUCENE_30));
 			}
 			else
 			{
-				parser = new MultiFieldQueryParser(Version.LUCENE_30,new String[]{"filename","Künstler","Titel","Album","Jahr","Songtext"},new StandardAnalyzer(Version.LUCENE_30));
+				parser = new MultiFieldQueryParser(Version.LUCENE_30,new String[]{"filename","Künstler","Titel","Album","Jahr"},new StandardAnalyzer(Version.LUCENE_30));
 			}
 			
 			

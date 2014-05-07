@@ -143,7 +143,6 @@ public class Index {
 		doc.add(new Field("Album",tag.getFirst(FieldKey.ALBUM),Field.Store.YES,Field.Index.ANALYZED));
 		doc.add(new Field("Titel",tag.getFirst(FieldKey.TITLE),Field.Store.YES,Field.Index.ANALYZED));
 		doc.add(new Field("Jahr",tag.getFirst(FieldKey.YEAR),Field.Store.YES,Field.Index.ANALYZED));
-		doc.add(new Field("Songtext",tag.getFirst(FieldKey.LYRICS),Field.Store.YES,Field.Index.ANALYZED));
 		
 		return doc;
 	}

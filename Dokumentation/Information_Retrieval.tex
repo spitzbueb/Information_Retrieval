@@ -45,7 +45,7 @@ Bei einer Suchmaschine liegen die Stärken im Resultat welches geliefert wird. L
 \begin{itemize}
 	\item Ranked Searching - Die besten Resultate werden als Erste zurückgegeben.
 	\item Verschiedene Query-Typen
-	\item Feldsuche (Hier Titel, Album, Künstler, Jahr).
+	\item Feldsuche (Hier Titel, Album, Künstler, Jahr, Songtext).
 	\item Mehrfache Indexe durchsuchen mit zusammengefasstem Ergebnis.
 	\item Schnell
 	\item Speichereffizient
@@ -70,7 +70,7 @@ Information Retrieval Systeme müssen komplexe Anforderungen erfüllen. Mit den 
 \\
 Lucene ist genau solch ein IR-System. Dieses System soll nun analysiert werden. Darunter fällt die Analyse der verschiedenen Analyzer. Konkret handelt es sich um den Standard Analyzer, den Whitespace Analyzer, den Stop Analyzer und den Simple Analyzer. Hier möchte ich mich darauf konzentrieren, wie genau die Informationen in den Index gespeichert werden. Ein ebenfalls wichtiger Faktor ist die Zeit. Einerseits die Dauer der Indexerstellung und danach die Dauer der Suche mit den verschiedenen Einstellungen. Als Letztes möchte ich mich um die Analyse des Ergebnisses kümmern, wobei ich eine Testmenge an MP3 benutze um damit die tatsächlichen Suchergebnisse mit der erwarteten Menge zu vergleichen.
 \section*{Lucene Search Engine}
-Das entwickelte Programm hat den Namen \textquotedblleft Lucene Search Engine\textquotedblright und wurde in Java entwickelt. Im Programm kann unter dem Punkt \textquotedblleft Pfad\textquotedblright der Ablageort der MP3-Dateien angegeben werden. Mit dem Button Index wird dann in diesem Pfad ein Ordner Index erstellt, in welchem der Lucene-Index erstellt wird. Dabei durchsucht das Programm alle MP3-Dateien im angegeben Pfad, auch in Unterordnern. Aus diesen Dateien werden dann die Informationen Titel, Album, Künstler, Jahr, Pfad und Dateiname extrahiert und in den Index geschrieben. Gesucht wird dann in den Feldern Titel, Album, Künstler, Jahr und Dateiname. Als Ergebnis wird der Pfad zur entsprechenden Dateien ausgegeben.
+Das entwickelte Programm hat den Namen \textquotedblleft Lucene Search Engine\textquotedblright und wurde in Java entwickelt. Im Programm kann unter dem Punkt \textquotedblleft Pfad\textquotedblright der Ablageort der MP3-Dateien angegeben werden. Mit dem Button Index wird dann in diesem Pfad ein Ordner Index erstellt, in welchem der Lucene-Index erstellt wird. Dabei durchsucht das Programm alle MP3-Dateien im angegeben Pfad, auch in Unterordnern. Aus diesen Dateien werden dann die Informationen Titel, Album, Künstler, Jahr, Songtext, Pfad und Dateiname extrahiert und in den Index geschrieben. Gesucht wird dann in den Feldern Titel, Album, Künstler, Jahr, Songtext und Dateiname. Als Ergebnis wird der Pfad zur entsprechenden Dateien ausgegeben.
 \newpage
 \subsection*{Das GUI}
 In diesem Abschnitt möchte ich ganz kurz die grafische Benutzeroberfläche erläutern. Ich gehe nicht weiter auf die Programmierung ein, da dies nur ein kleiner, eher unwichtiger Teil der Search Engine ist.
@@ -117,5 +117,98 @@ Lucene bietet integrierte Funktionen, um die Suche besser auf seine Wünsche anz
 \end{figure}
 \footnotetext{Quelle: Screenshot}
 \subsection*{Der Indexer}
-In diesem Teil möchte ich kurz auf die Klasse Index eingehen, welche nach den MP3-Dateien sucht und die Informationen aus den ID3-Tags zieht. 
+In diesem Teil möchte ich kurz auf die Klasse Index eingehen, welche nach den MP3-Dateien sucht und die Informationen aus den ID3-Tags zieht. Die Klasse Index wird durch das GUI gestartet, indem man den Kopf \textquotedblleft Index\textquotedblright betätigt. Als Parameter erhält er den Inhalt des Textfeldes \textquotedblleft Pfad\textquotedblright und welcher Analyzer genutzt werden soll. Nun wird der Pfad für den Index definiert. Dieser liegt immer im angegeben Verzeichnis im Unterordner \textquotedblleft Index\textquotedblright . Danach initialisiert die Klasse den Indexer und erstellt den Analyzer. Im Anschluss startet er die Messung der Zeit und beginnt die Dateien zu suchen und die Informationen zu extrahieren. Dies geschieht in der Methode index(String dataDir, FileFilter filter). Falls er einen Ordner findet, öffnet die Klasse den Ordner und sucht weiter nach Dateien.\\
+\\
+Hat die Methode eine MP3-Datei gefunden, wird sie mit der Methode indexFile(File f) in ein Document-Typ gewandelt, welcher die Informationen aus den ID3-Tags enthält. Per writer.addDocument(doc) wird das MP3 in den Index aufgenommen. Die ID3-Tags werden in der Methode getDocument(File f) einzeln aus jedem MP3 ausgelesen. Dabei standen verschiedene Lösungen zur Verfügung. Dazu aber später mehr im Kapitel \textquotedblleft ID3-Tags\textquotedblright .\\
+\\
+Sobald alle MP3-Dateien aufgenommen wurde, berechnet die Klasse als Letztes, wie lange der Vorgang gedauert hat. Dieses Ergebnis wird dann, wie schon erwähnt, auf dem GUI ausgegeben. Der Index wurde erstellt und kann nun zur Suche genutzt werden.
+\subsection*{Der Searcher}
+Ein Index alleine nützt uns nichts, wenn nicht ein Searcher implementiert wird, der diesen Index auch durchsuchen kann. Dazu ist in diesem Projekt die Klasse \textquotedblleft Searcher\textquotedblright vorhanden. Wie schon beim Indexer, erhält der Aufruf per Knopfdruck auf den Button \textquotedblleft Suche\textquotedblright die Parameter Pfad, Analyzerart und die Anfrage. Der Pfad wird direkt aus dem Indexpfad gelesen. So findet das Programm den korrekten Index. Danach startet die Methode search(String indexDir, String q, String analyzerArt).\\
+\\
+Die Methode search öffnet den vorgegebenen Pfad um den Index zu lesen. Danach wird ein Parser erstellt, der mehrere Felder absuchen kann (MultiFieldQueryParser). Je nach Analyzerart wird eine andere Version erstellt. Dieser Parser wandelt die Benutzeranfrage (hier q) so um, dass Lucene die Anfrage versteht. Die Methode durchsucht den Index und ergibt maximal 100 Ergebnisse. Die einzelnen gefundenen Inforationen werden wieder in den Typ Document umgewandelt. Zum Schluss wird eine ArrayList mit Document zurückgegeben, welche alle Ergebnisse beinhaltet. Die Liste wird jedesmal bei der Suche gelöscht und wieder von neuem befüllt. Der Inhalt der ArrayList wird zum Schluss im GUI ausgegeben, sowie auch die Dauer der Suche.
+\subsection*{ID3-Tags}
+ID3-Tags sind Informationen, welche direkt in die Dateien eingebettet wurden. Sie beinhalten wertvolle Informationen wie Titel, Künstler, Album, Jahr, Genre, usw. ID3 hat sich mittlerweile zum Standard für MP3 entwickelt und wird von Programmen wie iTunes, Windows Media Player und VLC genutzt. Leider können nicht alle Programme mit jeder ID3-Version umgehen. Dies kann zu Komplikationen führen.\\
+\\
+Um in meiner Applikation diese Daten zu extrahieren, standen drei Möglichkeiten zur Auswahl. Diese waren manuelles extrahieren in Java, benutzen einer Bibliothek und einsetzen von Tika.
+\subsubsection*{Manuelles extrahieren}
+Das auslesen von ID3v1 ist relativ einfach. Die Informationen sind immer fest in einem Block von 128 Bytes am Ende der Datei gespeichert. Bei Offset 3 mit einer Länge von 30 wird zum Beispiel der Songtitel gespeichert. Folgende Tabelle gibt die Felder und deren Position wieder:\\
+\begin{tabular}{|c|c|l|} \hline
+ \textbf{Offset} & \textbf{Länge in Bytes} & \textbf{Bedeutung}\\
+ \hline
+ 0 & 3 & Kennung eines ID3v1-Blocks\\ \hline
+ 3 & 30 & Songtitel\\ \hline
+ 33 & 30 & Künstler\\ \hline
+ 63 & 30 & Album\\ \hline
+ 93 & 4 & Jahr\\ \hline
+ 97 & 30 & Kommentar\\ \hline
+ 127 & 1 & Genres\\ \hline
+\end{tabular}
+Diese können so direkt angesprochen werden. Schwieriger wird es mit der Version 2. Ab Version zwei wird im Header der Datei angegeben, ob es sich um ID3 der Version 2 handelt. Die Tags werden dann so kodiert, dass ein Player sie nicht versteht und als fehlerhafte Informationen interpretiert. So werden die Teile der Datei übersprungen und nicht abgespielt. Neu können auch Bilder in diese Feldern abgelegt werden. Allerdings ist die Implementation sehr mühsam.
+\\
+\\
+Da diese Lösung viel Zeit verschlingen würde, da für jede Version der ID3-Tags auch eine Methode geschrieben werden müsste, die die entsprechenden Tags ausliest, habe ich diese Lösung nicht in Betracht gezogen. Ausserdem muss ich das Rad nicht neu erfinden, wenn schon Möglichkeiten vorhanden sind, welche meine Anforderungen erfüllen. So kommen wir zum nächsten Kapitel.
+\subsubsection*{Tika}
+Tika ist ein Framework, das im Oktober 2008 zur Lucene-Familie hinzugefügt wurde. Es besitzt die gleichen Standard-APIs wie Lucene. Tika selber ist nur eine Ergänzung, welche verschiedene Parser für Dateien beinhaltet. Darunter auch MP3. Allerdings können laut Buch \textquotedblleft Lucene in Action\textquotedblright nur ID3v1-Tags ausgelesen werden. Dies erschwert unser vorhaben wieder, da verschiedene Versionen eingesetzt werden können. Ausserdem muss Tika auf andere Open-Source Projekte aufsetzen, um Dateien zu suchen und zu öffnen. Dies kann das Framework nicht selbst tätigen.\\
+\\
+Aus diesen Gründen konnte ich Tika aus meinen Möglichkeiten streichen, da so der Aufbau der Applikation nur komplizierter wurde. Und mit der Einschränkung auf ID3v1 war Tika nicht wirklich eine gute Wahl für mein Vorhaben. Ausserdem exportiert Tika die Informationen in eine XHTML-Datei. Das heisst, dass ich zusätzlich zum Index nochmals Dateien ablegen müsste. Somit blieb mir die letzte Lösung.
+\subsubsection*{Extraktion mit Library}
+Im Internet gibt es verschiedene Bibliotheken, die frei zur Verfügung stehen und sich um solche Dinge, wie die Extraktion von ID3-Tags, kümmern. Meine Wahl fiel auf die Lösung JAudioTagger. Dies ist ein kleines JAR-File, welches problemlos in das Projekt integriert werden konnte. Mit wenigen Code-Zeilen ermöglichte mir die Klasse, dass die Informationen aus den MP3-Dateien in den Index geschrieben werden konnten.
+\\
+\\
+Mit 3 Zeilen wird der Vorgang initialisiert. 
+\begin{lstlisting}
+AudioFile audioFile = AudioFileIO.read(f);
+Tag tag = audioFile.getTag();
+AudioHeader header = audioFile.getAudioHeader();
+\end{lstlisting}
+Zeile 1 liest die Datei ein und wandelt sie in den Typ AudioFile. Durch diesen Typ können nun mit der Methode getTag() in Zeile 2 die ID3-Tags ausgelesen werden. Als Zusatz (aber hier nicht notwendig) wird der Header für weitere Funktionen aus dem AudioFile ausgelesen. Um nun die bestimmten Tags zu bekommen braucht es nur noch den folgenden Befehl:
+\begin{lstlisting}
+tag.getFirst(FieldKey.TITLE)
+\end{lstlisting}
+Mit diesem Befehl wird der spezifische Eintrag bei Titel gelesen. Diese kann dann direkt beim Indexer in ein Feld für den Typ Document gespeichert werden. Natürlich kann anstatt TITLE auch ALBUM, YEAR, ARTIST, usw. genutzt werden. Somit habe ich alle relevanten Informationen aus den Dateien extrahiert und in meinen Index geschrieben.
+\newpage
+\section*{Analyse der Leistung}
+Die Suchleistung der Engine möchte ich über zwei Werte vergleichen. Einerseits wäre das natürlich die Zeit, welche benötigt wird, um zu indexieren und zu suchen. Andererseits muss auch das Ergebnis überprüft werden, ob auch die erwarteten Resultate zurückgegeben werden. Die Algorithmen welche verwendet werden, sind bei Lucene die Analyzer. Daher werde ich die vier gezeigten Analyzer überprüfen und danach die Werte vergleichen und ein Fazit ziehen.
+\subsection*{Vorbereitung}
+Um eine korrekte Messung zu bekommen, müssen für alle Analyzer die gleichen Umstände herrschen. Das heisst, dass auf einem USB-Stick eine Auswahl an Dateien gespeichert sind. Diese werden indexiert (ergibt ersten Wert). Dann wird dieser Index (der danach ebenfalls auf dem USB-Stick liegt) wird mit bestimmtem Suchabfragen gefüttert, um dann die Ergebnisse und die benötigte Zeit zu bekommen. Die Tests werden unter Windows 8.1 durchgeführt, auf einem Notebook mit einer 256GB Solid State Disk. Der USB-Stick besitzt 8GB Speicherplatz und ist von der Marke disk2go.com\\
+\subsubsection*{Testmenge}
+Für den Test wurden drei Ordner aus der Musikbibliothek ausgewählt. Insgesamt enthält der USB-Stick 960 Dateien und 55 Ordner. Dabei wurden Bilddateien oder ähnliche nicht entfernt. Für die Gegenüberstellung der Suchergebnisse wird das Programm MediaMonkey auf dem Computer installiert und mit der Testmenge gefüttert. Im optimalsten Fall müsste die Search Engine die gleichen Ergebnisse liefern wie das spezifizierte Suchprogramm. MediaMonkey wird in der Version 4.1.1 eingesetzt. Laut MediaMonkey sind auf dem USB-Stick 29 Genres, 257 Interpreten und 51 Alben vorhanden.
+\subsection*{Zeitmessung}
+In diesem Abschnitt möchte ich mich ausschliesslich um die Zeitmessungen bei den verschiedenen Analyzern kümmern. Als erstes beginnen wir mit der Messung der Indexierung. Danach kommt die Messung der Suchanfragen.
+\subsubsection*{Standard Analyzer}
+Wir beginnen mit dem Standard Analyzer. Zuerst möchte ich erklären, wie dieser bei der Indexierung vorgeht. Man kann den Standard Analyzer nur als umfassend einsetzbar bezeichnen. Er enthält JFlex basierten Grammatik. Somit kann er alphanummerische Werte, Akronyme, Email-Adressen, Webseiten, IP-Adresse, usw. erkennen. Ausserdem besitzt er die Stopp-Wörter, die auch der Stop-Analyzer verwendet. Bei Stop-Wörtern werden uninteressante Wörter wie Der, Die, Das ausgeblendet und nicht in die Indexierung aufgenommen. Ausserdem ist er der einzige Analyzer, der Strings wie X\&Y oder xy@zhaw.ch direkt in den Index übernimmt.\\
+\\
+Nun indexieren wir mit dem Standard Analyzer die Dateien auf dem USB-Stick:
+\begin{figure}[h!]
+\centering
+\includegraphics[width=10cm]{img/standard-analyzer-index.png}
+\caption{Indexierung abgeschlossen\protect\footnotemark}
+\end{figure}
+\footnotetext{Quelle: Screenshot}
+Wie wir auf dem Screenshot sehen brauchte die Indexierung 6578 Millisekunden um den Ordner und den Index auf dem USB-Stick zu erstellen und die Dateien zu durchforsten. Umgerechnet sind das ungefähr 6,6 Sekunden.
+\subsubsection*{Simple Analyzer}
+Der Simple Analyzer arbeitet auf eine sehr rudimentären Basis. Da Text bei den Analyzern immer in Tokens umgewandelt (also geteilt) werden muss, gehen die Algorithmen auf verschiedene Arten vor. Der Simple Analyzer überprüft den Text nur auf Zeichen die keine Buchstaben sind. Sobald er ein solches Zeichen gefunden hat, teilt er den String an dieser Stelle. Aus dem Beispiel des Standard Analyzers, folgt also das X\&Z zu X und Z werden würden und xy@zhaw.ch würde zu xy, zhaw und ch werden. Der Analyzer ist sehr einfach aufgebaut, müsste aber nach meiner Erwartung dafür schneller sein als der Standard Analyzer. Nach meiner Überlegung müsste nur der Whitespace Analyzer noch schneller sein. Später aber mehr dazu.
+\newpage
+Der Index-Ordner wird auf dem USB-Stick wieder gelöscht und erneut erstellt mit dem Simple Analyzer:
+\begin{figure}[h!]
+\centering
+\includegraphics[width=10cm]{img/simple-analyzer-index.png}
+\caption{Indexierung abgeschlossen\protect\footnotemark}
+\end{figure}
+\footnotetext{Quelle: Screenshot}
+\\
+Auch hier können wir dem Screenshot wieder ablesen, dass die Indexierung insgesamt 5294 Millisekunden gedauert hat. Die Arbeiten, die das Programm machen musste, waren die Gleichen wie schon beim Standard Analyzer. In Sekdunden umgerechnet dauerte das indexieren als ungefähr 5,3 Sekunden. Wie erwartet war dieser Analyzer schneller als der vorherige.
+\subsubsection*{Whitespace Analyzer}
+Wie der Simple Analyzer ist der Whitespace Analyzer sehr einfach aufgebaut. Der Text wird in diesem Fall nicht einfach nach Nicht-Buchstaben durchsucht, sondern die Tokens werden aus den Leerschlägen (Whitespaces) im Text erstellt. Wieder am Beispiel von X\&Z xy@zawh.ch würde er X\&Y und xy@zhaw.ch erkennen. Allerdings hat er, wie der Simple Analyzer das Problem, dass keine Stop-Wörter erkennt werden. Das heisst, unwichtige Wörter wie \textquotedblleft und\textquotedblright werden ebenfalls in den Index aufgenommen. Da diese Füllwörter sehr häufig vorkommen, könnten sie im Index eine höhere Gewichtung erhalten, ohne dass sie wirklich Informationen über den Text oder die Datei liefern.
+\newpage
+Es werden wieder die gleichen Schritte durchgeführt wie zuvor:
+\begin{figure}[h!]
+\centering
+\includegraphics[width=10cm]{img/whitespace-analyzer-index.png}
+\caption{Indexierung abgeschlossen\protect\footnotemark}
+\end{figure}
+\footnotetext{Quelle: Screenshot}
+\\
+Dieses Mal hat der Indexierungsvorgang 5151 Millisekunden gedauert. Wie erwartet war der Whitespace Analyzer noch ein bisschen schneller als der Simple Analyzer. Ich schätze, dass dies aus der Limitierung auf Leerzeichen kommt, da er nicht nach verschiedenen Zeichen suchen muss. Sprich für jedes Zeichen im Text muss nur eine einzige Abfrage gemacht werden. Umgerechnet sind dies ungefähr 5,2 Sekunden.
+\subsubsection*{Stop Analyzer}
 \end{document}
