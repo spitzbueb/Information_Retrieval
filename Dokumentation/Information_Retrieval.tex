@@ -142,7 +142,7 @@ Das auslesen von ID3v1 ist relativ einfach. Die Informationen sind immer fest in
  93 & 4 & Jahr\\ \hline
  97 & 30 & Kommentar\\ \hline
  127 & 1 & Genres\\ \hline
-\end{tabular}
+\end{tabular} \\ \\
 Diese können so direkt angesprochen werden. Schwieriger wird es mit der Version 2. Ab Version zwei wird im Header der Datei angegeben, ob es sich um ID3 der Version 2 handelt. Die Tags werden dann so kodiert, dass ein Player sie nicht versteht und als fehlerhafte Informationen interpretiert. So werden die Teile der Datei übersprungen und nicht abgespielt. Neu können auch Bilder in diese Feldern abgelegt werden. Allerdings ist die Implementation sehr mühsam.
 \\
 \\
@@ -211,4 +211,207 @@ Es werden wieder die gleichen Schritte durchgeführt wie zuvor:
 \\
 Dieses Mal hat der Indexierungsvorgang 5151 Millisekunden gedauert. Wie erwartet war der Whitespace Analyzer noch ein bisschen schneller als der Simple Analyzer. Ich schätze, dass dies aus der Limitierung auf Leerzeichen kommt, da er nicht nach verschiedenen Zeichen suchen muss. Sprich für jedes Zeichen im Text muss nur eine einzige Abfrage gemacht werden. Umgerechnet sind dies ungefähr 5,2 Sekunden.
 \subsubsection*{Stop Analyzer}
+Der Stop Analyzer hat die Besonderheit, dass er unwichtige Wörter im Text erkennt und automatisch nicht in den Index aufnimmt. Diese Stop-Wörter können mit Listen erweitert werden, was aber in dieser Arbeit weggelassen wurde. So beschränkt sich der Stop Analyzer auf Wörter wie \textquotedblleft The\textquotedblright oder \textquotedblleft and\textquotedblright . Da die meisten MP3 auf Englisch sind, sowie deren Songtexte, ist die Standardimplementierung keine schlecht Wahl.
+\newpage
+Ein letztes Mal wird der Index gelöscht und die Zeit nochmals gemessen:
+\begin{figure}[h!]
+\centering
+\includegraphics[width=10cm]{img/stop-analyzer-index.png}
+\caption{Indexierung abgeschlossen\protect\footnotemark}
+\end{figure}
+\footnotetext{Quelle: Screenshot}
+\\
+Beim letzten Test ging die Indexierung 5582 Millisekunden. Im Vergleich zum Simple und Whitespace Analyzer hat sich die Dauer wieder erhöht. Umgerechnet in Sekunden sind das ungefähr 5.6 Sekdunden. Mit dieser Zeit liegt der Stop Analyzer aber immer noch unterhalb des Standard Analyzers. Ich erkläre mir das so, dass der Standard Analyzer komplexere Muster zu erkennen hat. Dadurch wird die Indexierung entsprechend länger brauchen.
+\subsubsection*{Fazit Indexierungsdauer}
+Im Vergleich haben wir nun gesehen, dass der Whitespace und der Simple Analyzer die schnellsten Verfahren sind. Mit 5,2 und 5,3 Sekunden liegen sie einiges weiter vorne als der Stop Analyzer und der Standard Analyzer. Da wir hier im Test mit einer kleinen Menge an Dateien arbeiten könnten wir das Ergebnis hochrechnen:\\
+Gehen wir davon aus, dass nur MP3-Dateien in den Ordnern liegen. bei 960 Dateien mit der Gesamtgrösse von 4.6 GB, können wir abschätzen, dass eine MP3-Datei zirka 4.9 MB gross ist. Pro MP3-Datei hat der Analyzer in unserem Fall folgende Zeiten benötigt:
+\begin{itemize}
+	\item Standard Analyzer: 6.85 Millisekunden
+	\item Simple Analyzer: 5.5 Millisekunden
+	\item Whitespace Analyzer: 5.3 Millisekunden
+	\item Stop Analyzer: 5.8 Millisekunden
+\end{itemize}
+Sagen wir nun, dass die durchschnittliche MP3-Sammlung einer Person an die 25 GB Speicherplatz braucht (Wert aus Erfahrung und Referenz der eigenen Sammlung). Dann folgt daraus, dass ungefähr 5224 MP3-Dateien vorhanden sind. Dadurch können wir sagen, wie lange die Indexierung bei dieser Menge brauchen würde:
+\begin{itemize}
+	\item Standard Analyzer: 35.8 Sekunden
+	\item Simple Analyzer: 28.7 Sekunden
+	\item Whitespace Analyzer: 27.7 Sekunden
+	\item Stop Analyzer: 30.3 Sekunden
+\end{itemize}
+Wir sehen, je grösser die Sammlung wird, desto grösser wird der Unterschied in der Dauer der Indexierung. Immerhin ist der schnellste Analyzer um fasst 20\% schneller als der langsamste Analyzer (langsamer Analyzer wurde als 100\% gewertet).
+\subsection*{Suchmessung}
+Die Messung der Suchleistung teile ich in zwei Arten. Die eine Art kümmert sich um die Dauer der Suchanfrage, die andere konzentriert sich auf die gefundene Menge und ob diese Menge der erwarteten entspricht. Dazu brauchen wir aber noch eine kurze Vorbereitung, in der definiert wird, welche Suchanfragen überprüft werden. Die folgende Liste soll uns als Orientierung dienen:\\
+\begin{tabular}{|l|p{10cm}|} \hline
+\textbf{Suchanfrage} & \textbf{Ergebnis} \\ \hline
+long way & Pfad zu:\newline 14-Do You Remember.mp3 \newline 04 Flyover.mp3 \newline 01 Hip Hop Bommi Bop (Tap Into Ameri).mp3 \newline 01 It's A Long Way To The Top (If Yo).mp3 \newline 01 It's A Long Way To The Top (If Yo).mp3 \newline 13 Long way from Liverpool.mp3 \newline 36 Stand up.mp3 \newline 13 Viva La Revolucion.mp3 \newline 18 Whole Wide World.mp3 \\ \hline
+Break & Pfad zu: \newline 03 All for the sake of love.mp3 \newline 01 Ballbreaker.mp3 \newline 02 Blow Me Away.mp3 \newline 17 Break on through.mp3 \newline 08 Breaking The Rules.mp3 \newline 14 Disneyland.mp3 \newline 23 Do Anything You Wanna Do.mp3 \newline 14 Do You Remember.mp3 \newline 08 Hand of Blood.mp3 \newline 01 Heatseeker.mp3 \newline 10 I Faught The Law.mp3 \newline 01 It's Like That [Drop The Break -.mp3 \newline 03 Life Burns.mp3 \newline 13 Love Machine.mp3 \newline 04 Lovesong.mp3 \newline 09 More \& More.mp3 \newline 11 No Escape.mp3 \newline 05 Problem Child.mp3 \newline 05 Pushed Again.mp3 \newline 03 Super Shooter.mp3 \newline 20 The Great Escape.mp3 \newline 07 The Guns Of Brixton.mp3 \newline 25 The World.mp3 \newline 27 Top of the World.mp3 \newline 10 Two's Up.mp3 \newline 10 Wake the Dead.mp3 \newline 01 Who Let The Dogs Out.mp3 \\ \hline
+\end{tabular}
+\newpage
+\begin{tabular}{|l|p{10cm}|} \hline
+\textbf{Suchanfrage} & \textbf{Ergebnis} \\ \hline
+instrumental & Pfad zu: \newline 03 All for the sake of love.mp3 \newline 06 Diary of a lover.mp3 \newline 09 Helmstedt Blues.mp3 \newline 16 Imperial March.mp3 \newline 13 Love Machine.mp3 \newline 09 More \& More.mp3 \newline 10 My Land.mp3 \newline 12 Perfect Criminal.mp3 \newline 01 Tote Hose.mp3 \newline 10 You Shook Me All Night Long.mp3 \\ \hline
+Bells Album:Black & Pfad zu \newline 04 Hells Bells.mp3 \\ \hline
+\textquotedblleft break on through\textquotedblright & Pfad zu: \newline 17 Break on through.mp3 \\ \hline
+Bells OR Hit Album:Black & Pfad zu: \newline 01 Back In Black.mp3 \newline 02 Given The Dog A Bone.mp3 \newline 03 Have A Drink On Me.mp3 \newline 04 Hells Bells.mp3 \\ \hline
+\end{tabular} \\ \\
+Dies sind die Abfragen, welche ich verwenden werde, um die Engine zu testen. Ich lasse bewusst die Möglichkeit nach ähnlichen Wörtern zu suchen weg, da das Referenzprogramm dies ebenfalls nicht unterstützt.
+\subsubsection{Standard Analyzer}
+Wir starten mit dem Standard Analyzer. Da MediaMonkey bei Suchen wie long way die beiden Wörter mit AND verknüpft, wird die Abfrage in der Engine angepasst, so dass die Logik stimmt. Daher werden solche Anfragen zu long AND way. Die Screenshots zeigen die jeweiligen Ergebnisse. Die Dauer wird in der Bildunterschrift vermerkt:
+\begin{figure}[h!]
+\centering
+	\begin{minipage}[b]{7cm}
+	\includegraphics[width=6cm]{img/search1_stanAn_3MS.png}
+	\end{minipage}
+	\begin{minipage}[b]{7cm}
+	\includegraphics[width=6cm]{img/search2_stanAn_2MS.png}
+	\end{minipage}
+\caption{Links: Suche 1 nach 3ms, Rechts: Suche 2 nach 2ms\protect\footnotemark}
+\end{figure}
+\footnotetext{Quelle: Screenshot}
+\begin{figure}[h!]
+\centering
+	\begin{minipage}[b]{7cm}
+	\includegraphics[width=6cm]{img/search3_stanAn_1MS.png}
+	\end{minipage}
+	\begin{minipage}[b]{7cm}
+	\includegraphics[width=6cm]{img/search4_stanAn_0MS.png}
+	\end{minipage}
+\caption{Links: Suche 3 nach 1ms, Rechts: Suche 4 nach \textless 1ms\protect\footnotemark}
+\end{figure}
+\footnotetext{Quelle: Screenshot}
+\begin{figure}[h!]
+\centering
+	\begin{minipage}[b]{7cm}
+	\includegraphics[width=6cm]{img/search5_stanAn_5MS.png}
+	\end{minipage}
+	\begin{minipage}[b]{7cm}
+	\includegraphics[width=6cm]{img/search6_stanAn_1MS.png}
+	\end{minipage}
+\caption{Links: Suche 5 nach 5ms, Rechts: Suche 6 nach 1ms\protect\footnotemark}
+\end{figure}
+\footnotetext{Quelle: Screenshot}
+\subsubsection*{Simple Analyzer}
+Nun wiederholen wir die Probe mit dem Simple Analyzer:
+\begin{figure}[h!]
+\centering
+	\begin{minipage}[b]{7cm}
+	\includegraphics[width=6cm]{img/search1_simAn_28.png}
+	\end{minipage}
+	\begin{minipage}[b]{7cm}
+	\includegraphics[width=6cm]{img/search2_simAn_0.png}
+	\end{minipage}
+\caption{Links: Suche 1 nach 28ms, Rechts: Suche 2 nach \textless 1ms\protect\footnotemark}
+\end{figure}
+\footnotetext{Quelle: Screenshot}
+\begin{figure}[h!]
+\centering
+	\begin{minipage}[b]{7cm}
+	\includegraphics[width=6cm]{img/search3_simAn_4.png}
+	\end{minipage}
+	\begin{minipage}[b]{7cm}
+	\includegraphics[width=6cm]{img/search4_simAn_0.png}
+	\end{minipage}
+\caption{Links: Suche 3 nach 4ms, Rechts: Suche 4 nach \textless 1ms\protect\footnotemark}
+\end{figure}
+\footnotetext{Quelle: Screenshot}
+\begin{figure}[h!]
+\centering
+	\begin{minipage}[b]{7cm}
+	\includegraphics[width=6cm]{img/search5_simAn_15.png}
+	\end{minipage}
+	\begin{minipage}[b]{7cm}
+	\includegraphics[width=6cm]{img/search6_simAn_0.png}
+	\end{minipage}
+\caption{Links: Suche 5 nach 15ms, Rechts: Suche 6 nach \textless 1ms\protect\footnotemark}
+\end{figure}
+\footnotetext{Quelle: Screenshot} \newpage
+\subsubsection{Whitespace Analyzer}
+Dieses Prozedere wiederholen wir nun nochmals für den Whitespace Analyzer:
+\begin{figure}[h!]
+\centering
+	\begin{minipage}[b]{7cm}
+	\includegraphics[width=6cm]{img/search1_whiAn_4.PNG}
+	\end{minipage}
+	\begin{minipage}[b]{7cm}
+	\includegraphics[width=6cm]{img/search2_whiAn_16.PNG}
+	\end{minipage}
+\caption{Links: Suche 1 nach 4ms, Rechts: Suche 2 nach 16ms\protect\footnotemark}
+\end{figure}
+\footnotetext{Quelle: Screenshot}
+\begin{figure}[h!]
+\centering
+	\begin{minipage}[b]{7cm}
+	\includegraphics[width=6cm]{img/search3_whiAn_4.PNG}
+	\end{minipage}
+	\begin{minipage}[b]{7cm}
+	\includegraphics[width=6cm]{img/search4_whiAn_16.PNG}
+	\end{minipage}
+\caption{Links: Suche 3 nach 4ms, Rechts: Suche 4 nach 16ms\protect\footnotemark}
+\end{figure}
+\footnotetext{Quelle: Screenshot}
+\begin{figure}[h!]
+\centering
+	\begin{minipage}[b]{7cm}
+	\includegraphics[width=6cm]{img/search6_whiAn_15.PNG}
+	\caption{Suche 6 nach 15ms\protect\footnotemark}
+	\end{minipage}
+\end{figure}
+\footnotetext{Quelle: Screenshot}
+\newpage
+\subsubsection*{Stop Analyzer}
+Ein letztes Mal führen wir nun die Analyse durch:
+\begin{figure}[h!]
+\centering
+	\begin{minipage}[b]{7cm}
+	\includegraphics[width=6cm]{img/search1_stoAn_16.PNG}
+	\end{minipage}
+	\begin{minipage}[b]{7cm}
+	\includegraphics[width=6cm]{img/search2_stoAn_0.PNG}
+	\end{minipage}
+\caption{Links: Suche 1 nach 16ms, Rechts: Suche 2 nach \textless 1ms\protect\footnotemark}
+\end{figure}
+\footnotetext{Quelle: Screenshot}
+\begin{figure}[h!]
+\centering
+	\begin{minipage}[b]{7cm}
+	\includegraphics[width=6cm]{img/search3_stoAn_16.PNG}
+	\end{minipage}
+	\begin{minipage}[b]{7cm}
+	\includegraphics[width=6cm]{img/search4_stoAn_0.PNG}
+	\end{minipage}
+\caption{Links: Suche 3 nach 16ms, Rechts: Suche 4 nach \textless 1ms\protect\footnotemark}
+\end{figure}
+\footnotetext{Quelle: Screenshot}
+\begin{figure}[h!]
+\centering
+	\begin{minipage}[b]{7cm}
+	\includegraphics[width=6cm]{img/search5_stoAn_16.PNG}
+	\end{minipage}
+	\begin{minipage}[b]{7cm}
+	\includegraphics[width=6cm]{img/search6_stoAn_15.PNG}
+	\end{minipage}
+\caption{Links: Suche 5 nach 16ms, Rechts: Suche 6 nach 15ms\protect\footnotemark}
+\end{figure}
+\footnotetext{Quelle: Screenshot}
+\newpage
+\subsubsection*{Auswertung und Fazit}
+Vergleichen wir nun die verschiedenen Werte der Suche, kommen wir auf folgendes Ergebnis: \\
+\begin{tabular}{|l|c|c|c|c|} \hline
+ & \textbf{Standard} & \textbf{Simple} & \textbf{Whitespace} & \textbf{Stop} \\ \hline
+Hits Suche 1 & 7/9 & 7/9 & 2/9 & 7/9\\
+Hits Suche 2 & 17/27 & 17/29 & 3/29 & 17/29\\
+Hits Suche 3 & 10/10 & 10/10 & 2/10 & 10/10\\
+Hits Suche 4 & 1/1 & 1/1 & 1/1 & 1/1\\
+Hits Suche 5 & 1/1 & 1/1 & 0/1 & 1/1\\
+Hits Suche 6 & 3/4 & 3/4& 1/4 & 3/4\\ \hline
+Dauer Suche 1 & 3 & 28 & 4 & 16\\
+Dauer Suche 2 & 2 & \textless 1 & 16 & \textless 1\\
+Dauer Suche 3 & 1 & 4 & 4 & 16\\
+Dauer Suche 4 & \textless 1 & 1 & 16 & \textless 1\\
+Dauer Suche 5 & 5 & 15 & - & 16\\
+Dauer Suche 6 & 1 & \textless 1 & 15 & 15\\ \hline
+\end{tabular} \\ \\
+Wir erkennen also, dass kein Analyzer alle Einträge gefunden hat. Besonders bei Suche 2 gehen viele verloren. Zu erwähnen ist der Whitespace Analyzer, da dieser beim Indexieren zwar sehr schnell war, hingegen bei der Suchleistung und der benötigten Zeit sehr schwach ist. So hat er bei Suche 5 kein Resultat geliefert. Obwohl der Standard Analyzer lange indexiert, ist dafür seine Suchleistung sehr gut. Er hat den grossen Teil der Dateien gefunden und das in einer sehr guten Zeit.\\
+\\
+Schlussendlich muss man sagen, dass es wohl nicht den einen Analyzer gibt, welche alle Fälle sehr gut abdeckt. Steht der Fokus auf einer schnellen Indexierung, ist der Whitespace Analyzer wohl die erste Wahl. Hingegen bei einer optimalen Suchleistung würde ich in diesem Fall zum Standard Analyzer raten.
 \end{document}

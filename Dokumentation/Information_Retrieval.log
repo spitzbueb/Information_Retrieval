@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.20)  7 MAY 2014 18:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.20)  8 MAY 2014 20:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -587,6 +587,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 134--150
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 134--150
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 151--154
 
  []
@@ -628,29 +633,234 @@ File: img/whitespace-analyzer-index.png Graphic file (type png)
 Package pdftex.def Info: img/whitespace-analyzer-index.png used on input line 2
 07.
 (pdftex.def)             Requested size: 284.52756pt x 146.7875pt.
- [14 <./img/whitespace-analyzer-index.png>] (./Information_Retrieval.aux) ) 
+ [14 <./img/whitespace-analyzer-index.png>] <img/stop-analyzer-index.png, id=82
+, 418.56375pt x 214.401pt>
+File: img/stop-analyzer-index.png Graphic file (type png)
+
+<use img/stop-analyzer-index.png>
+Package pdftex.def Info: img/stop-analyzer-index.png used on input line 219.
+(pdftex.def)             Requested size: 284.52756pt x 145.74167pt.
+ [15 <./img/stop-analyzer-index.png>] [16]
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 250--258
+
+ []
+
+<img/search1_stanAn_3MS.png, id=94, 281.25075pt x 99.9735pt>
+File: img/search1_stanAn_3MS.png Graphic file (type png)
+
+<use img/search1_stanAn_3MS.png>
+Package pdftex.def Info: img/search1_stanAn_3MS.png used on input line 263.
+(pdftex.def)             Requested size: 170.71652pt x 60.68169pt.
+
+<img/search2_stanAn_2MS.png, id=95, 283.65974pt x 187.902pt>
+File: img/search2_stanAn_2MS.png Graphic file (type png)
+
+<use img/search2_stanAn_2MS.png>
+Package pdftex.def Info: img/search2_stanAn_2MS.png used on input line 266.
+(pdftex.def)             Requested size: 170.71652pt x 113.08612pt.
+
+<img/search3_stanAn_1MS.png, id=96, 283.65974pt x 124.0635pt>
+File: img/search3_stanAn_1MS.png Graphic file (type png)
+
+<use img/search3_stanAn_1MS.png>
+Package pdftex.def Info: img/search3_stanAn_1MS.png used on input line 274.
+(pdftex.def)             Requested size: 170.71652pt x 74.66583pt.
+
+<img/search4_stanAn_0MS.png, id=97, 281.25075pt x 28.908pt>
+File: img/search4_stanAn_0MS.png Graphic file (type png)
+
+<use img/search4_stanAn_0MS.png>
+Package pdftex.def Info: img/search4_stanAn_0MS.png used on input line 277.
+(pdftex.def)             Requested size: 170.71652pt x 17.5465pt.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 279.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 279.
+
+<img/search5_stanAn_5MS.png, id=98, 281.853pt x 34.9305pt>
+File: img/search5_stanAn_5MS.png Graphic file (type png)
+
+<use img/search5_stanAn_5MS.png>
+Package pdftex.def Info: img/search5_stanAn_5MS.png used on input line 285.
+(pdftex.def)             Requested size: 170.71652pt x 21.15779pt.
+
+<img/search6_stanAn_1MS.png, id=99, 281.25075pt x 60.82726pt>
+File: img/search6_stanAn_1MS.png Graphic file (type png)
+
+<use img/search6_stanAn_1MS.png>
+Package pdftex.def Info: img/search6_stanAn_1MS.png used on input line 288.
+(pdftex.def)             Requested size: 170.71652pt x 36.92079pt.
+ [18 <./img/search1_stanAn_3MS.png> <./img/search2_stanAn_2MS.png>]
+<img/search1_simAn_28.png, id=105, 287.8755pt x 94.55325pt>
+File: img/search1_simAn_28.png Graphic file (type png)
+
+<use img/search1_simAn_28.png>
+Package pdftex.def Info: img/search1_simAn_28.png used on input line 298.
+(pdftex.def)             Requested size: 170.71652pt x 56.07448pt.
+
+<img/search2_simAn_0.png, id=106, 278.84175pt x 264.99pt>
+File: img/search2_simAn_0.png Graphic file (type png)
+
+<use img/search2_simAn_0.png>
+Package pdftex.def Info: img/search2_simAn_0.png used on input line 301.
+(pdftex.def)             Requested size: 170.71652pt x 162.24208pt.
+
+<img/search3_simAn_4.png, id=107, 278.84175pt x 118.64325pt>
+File: img/search3_simAn_4.png Graphic file (type png)
+
+<use img/search3_simAn_4.png>
+Package pdftex.def Info: img/search3_simAn_4.png used on input line 309.
+(pdftex.def)             Requested size: 170.71652pt x 72.6402pt.
+
+<img/search4_simAn_0.png, id=108, 282.45525pt x 48.78226pt>
+File: img/search4_simAn_0.png Graphic file (type png)
+
+<use img/search4_simAn_0.png>
+Package pdftex.def Info: img/search4_simAn_0.png used on input line 312.
+(pdftex.def)             Requested size: 170.71652pt x 29.48393pt.
+
+<img/search5_simAn_15.png, id=109, 281.25075pt x 33.726pt>
+File: img/search5_simAn_15.png Graphic file (type png)
+
+<use img/search5_simAn_15.png>
+Package pdftex.def Info: img/search5_simAn_15.png used on input line 320.
+(pdftex.def)             Requested size: 170.71652pt x 20.47092pt.
+
+<img/search6_simAn_0.png, id=110, 282.45525pt x 65.64525pt>
+File: img/search6_simAn_0.png Graphic file (type png)
+
+<use img/search6_simAn_0.png>
+Package pdftex.def Info: img/search6_simAn_0.png used on input line 323.
+(pdftex.def)             Requested size: 170.71652pt x 39.67592pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[19 <./img/search3_stanAn_1MS.png> <./img/search4_stanAn_0MS.png> <./img/search
+5_stanAn_5MS.png> <./img/search6_stanAn_1MS.png> <./img/search1_simAn_28.png> <
+./img/search2_simAn_0.png>]
+<img/search1_whiAn_4.PNG, id=121, 283.65974pt x 42.75975pt>
+File: img/search1_whiAn_4.PNG Graphic file (type png)
+
+<use img/search1_whiAn_4.PNG>
+Package pdftex.def Info: img/search1_whiAn_4.PNG used on input line 333.
+(pdftex.def)             Requested size: 170.71652pt x 25.73433pt.
+
+<img/search2_whiAn_16.PNG, id=122, 277.63725pt x 48.78226pt>
+File: img/search2_whiAn_16.PNG Graphic file (type png)
+
+<use img/search2_whiAn_16.PNG>
+Package pdftex.def Info: img/search2_whiAn_16.PNG used on input line 336.
+(pdftex.def)             Requested size: 170.71652pt x 29.9968pt.
+
+<img/search3_whiAn_4.PNG, id=123, 282.45525pt x 41.55525pt>
+File: img/search3_whiAn_4.PNG Graphic file (type png)
+
+<use img/search3_whiAn_4.PNG>
+Package pdftex.def Info: img/search3_whiAn_4.PNG used on input line 344.
+(pdftex.def)             Requested size: 170.71652pt x 25.11594pt.
+
+<img/search4_whiAn_16.PNG, id=124, 280.6485pt x 34.32825pt>
+File: img/search4_whiAn_16.PNG Graphic file (type png)
+
+<use img/search4_whiAn_16.PNG>
+Package pdftex.def Info: img/search4_whiAn_16.PNG used on input line 347.
+(pdftex.def)             Requested size: 170.71652pt x 20.88203pt.
+
+<img/search6_whiAn_15.PNG, id=125, 283.0575pt x 35.53275pt>
+File: img/search6_whiAn_15.PNG Graphic file (type png)
+
+<use img/search6_whiAn_15.PNG>
+Package pdftex.def Info: img/search6_whiAn_15.PNG used on input line 355.
+(pdftex.def)             Requested size: 170.71652pt x 21.43094pt.
+ [20 <./img/search3_simAn_4.png> <./img/search4_simAn_0.png> <./img/search5_sim
+An_15.png> <./img/search6_simAn_0.png> <./img/search1_whiAn_4.PNG> <./img/searc
+h2_whiAn_16.PNG> <./img/search3_whiAn_4.PNG> <./img/search4_whiAn_16.PNG> <./im
+g/search6_whiAn_15.PNG>]
+<img/search1_stoAn_16.PNG, id=138, 281.853pt x 90.93974pt>
+File: img/search1_stoAn_16.PNG Graphic file (type png)
+
+<use img/search1_stoAn_16.PNG>
+Package pdftex.def Info: img/search1_stoAn_16.PNG used on input line 366.
+(pdftex.def)             Requested size: 170.71652pt x 55.08322pt.
+
+<img/search2_stoAn_0.PNG, id=139, 283.0575pt x 190.311pt>
+File: img/search2_stoAn_0.PNG Graphic file (type png)
+
+<use img/search2_stoAn_0.PNG>
+Package pdftex.def Info: img/search2_stoAn_0.PNG used on input line 369.
+(pdftex.def)             Requested size: 170.71652pt x 114.78276pt.
+
+<img/search3_stoAn_16.PNG, id=140, 279.444pt x 121.6545pt>
+File: img/search3_stoAn_16.PNG Graphic file (type png)
+
+<use img/search3_stoAn_16.PNG>
+Package pdftex.def Info: img/search3_stoAn_16.PNG used on input line 377.
+(pdftex.def)             Requested size: 170.71652pt x 74.3205pt.
+
+<img/search4_stoAn_0.PNG, id=141, 281.853pt x 28.908pt>
+File: img/search4_stoAn_0.PNG Graphic file (type png)
+
+<use img/search4_stoAn_0.PNG>
+Package pdftex.def Info: img/search4_stoAn_0.PNG used on input line 380.
+(pdftex.def)             Requested size: 170.71652pt x 17.50989pt.
+
+<img/search5_stoAn_16.PNG, id=142, 277.035pt x 28.908pt>
+File: img/search5_stoAn_16.PNG Graphic file (type png)
+
+<use img/search5_stoAn_16.PNG>
+Package pdftex.def Info: img/search5_stoAn_16.PNG used on input line 388.
+(pdftex.def)             Requested size: 170.71652pt x 17.81381pt.
+
+<img/search6_stoAn_15.PNG, id=143, 280.6485pt x 49.3845pt>
+File: img/search6_stoAn_15.PNG Graphic file (type png)
+
+<use img/search6_stoAn_15.PNG>
+Package pdftex.def Info: img/search6_stoAn_15.PNG used on input line 391.
+(pdftex.def)             Requested size: 170.71652pt x 30.04085pt.
+ [21 <./img/search1_stoAn_16.PNG> <./img/search2_stoAn_0.PNG> <./img/search3_st
+oAn_16.PNG> <./img/search4_stoAn_0.PNG> <./img/search5_stoAn_16.PNG> <./img/sea
+rch6_stoAn_15.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 398--417
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 398--417
+
+ []
+
+[22] (./Information_Retrieval.aux) ) 
 Here is how much of TeX's memory you used:
- 4556 strings out of 494935
- 60287 string characters out of 6178122
+ 4693 strings out of 494935
+ 63840 string characters out of 6178122
  126512 words of memory out of 5000000
- 7704 multiletter control sequences out of 15000+600000
+ 7813 multiletter control sequences out of 15000+600000
  10746 words of font info for 39 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 38i,8n,32p,932b,965s stack positions out of 5000i,500n,10000p,200000b,80000s
-</us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmtt12.pfb>
-Output written on Information_Retrieval.pdf (18 pages, 214584 bytes).
+ 38i,10n,32p,932b,965s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Information_Retrieval.pdf (26 pages, 365194 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
+ 190 PDF objects out of 1000 (max. 8388607)
+ 90 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 161 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,3 +1,5 @@
 \select@language {ngerman}
 \contentsline {chapter}{\numberline {1}Einleitung}{1}
 \contentsline {chapter}{\numberline {2}Hauptteil}{2}
+\contentsline {subsubsection}{Standard Analyzer}{18}
+\contentsline {subsubsection}{Whitespace Analyzer}{20}
