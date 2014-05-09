@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.20)  8 MAY 2014 20:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.20)  9 MAY 2014 18:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -389,34 +389,40 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2009/09/02 v1.2b extra appendix facilities
+\c@@pps=\count110
+\c@@ppsavesec=\count111
+\c@@ppsaveapp=\count112
+)
 (./Information_Retrieval.aux)
 \openout1 = `Information_Retrieval.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count110
+\scratchcounter=\count113
 \scratchdimen=\dimen119
 \scratchbox=\box30
-\nofMPsegments=\count111
-\nofMParguments=\count112
+\nofMPsegments=\count114
+\nofMParguments=\count115
 \everyMPshowfont=\toks23
-\MPscratchCnt=\count113
+\MPscratchCnt=\count116
 \MPscratchDim=\dimen120
-\MPnumerator=\count114
-\makeMPintoPDFobject=\count115
+\MPnumerator=\count117
+\makeMPintoPDFobject=\count118
 \everyMPtoPDFconversion=\toks24
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -466,7 +472,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count116
+\c@lstlisting=\count119
 
 (./title.tex <img/zhaw.png, id=1, 413.545pt x 432.61626pt>
 File: img/zhaw.png Graphic file (type png)
@@ -477,6 +483,10 @@ Package pdftex.def Info: img/zhaw.png used on input line 3.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./img/zhaw.png>])
+Underfull \hbox (badness 10000) in paragraph at lines 24--29
+
+ []
+
 [1
 
 ] (./Information_Retrieval.toc)
@@ -488,17 +498,17 @@ Package pdftex.def Info: img/zhaw.png used on input line 3.
 ] [1]
 Kapitel 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--38
+Underfull \hbox (badness 10000) in paragraph at lines 37--47
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--38
+Underfull \hbox (badness 10000) in paragraph at lines 37--47
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--38
+Underfull \hbox (badness 10000) in paragraph at lines 37--47
 
  []
 
@@ -507,30 +517,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--38
 ]
 Kapitel 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--45
+Underfull \hbox (badness 10000) in paragraph at lines 49--54
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--45
+Underfull \hbox (badness 10000) in paragraph at lines 49--54
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 46.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 55.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 46.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 55.
  [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 63--68
+Underfull \hbox (badness 10000) in paragraph at lines 72--77
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 69--72
+Underfull \hbox (badness 10000) in paragraph at lines 78--81
 
  []
 
@@ -538,71 +548,71 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--72
 File: img/Lucene_Search_Engine_1.jpg Graphic file (type jpg)
 
 <use img/Lucene_Search_Engine_1.jpg>
-Package pdftex.def Info: img/Lucene_Search_Engine_1.jpg used on input line 79.
+Package pdftex.def Info: img/Lucene_Search_Engine_1.jpg used on input line 88.
 (pdftex.def)             Requested size: 284.52756pt x 325.17647pt.
 
 <img/Pfadangabe.png, id=38, 373.395pt x 44.165pt>
 File: img/Pfadangabe.png Graphic file (type png)
  <use img/Pfadangabe.png>
-Package pdftex.def Info: img/Pfadangabe.png used on input line 88.
+Package pdftex.def Info: img/Pfadangabe.png used on input line 97.
 (pdftex.def)             Requested size: 284.52756pt x 33.65535pt.
 
 [5 <./img/Lucene_Search_Engine_1.jpg>]
 <img/suche.png, id=45, 371.3875pt x 32.12pt>
 File: img/suche.png Graphic file (type png)
  <use img/suche.png>
-Package pdftex.def Info: img/suche.png used on input line 97.
+Package pdftex.def Info: img/suche.png used on input line 106.
 (pdftex.def)             Requested size: 284.52756pt x 24.60846pt.
  [6 <./img/Pfadangabe.png> <./img/suche.png>]
 <img/Lucene_Search_Engine_2.png, id=49, 702.625pt x 803.0pt>
 File: img/Lucene_Search_Engine_2.png Graphic file (type png)
 
 <use img/Lucene_Search_Engine_2.png>
-Package pdftex.def Info: img/Lucene_Search_Engine_2.png used on input line 115.
+Package pdftex.def Info: img/Lucene_Search_Engine_2.png used on input line 124.
 
 (pdftex.def)             Requested size: 199.16928pt x 227.61984pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--125
+Underfull \hbox (badness 10000) in paragraph at lines 129--134
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--125
+Underfull \hbox (badness 10000) in paragraph at lines 129--134
 
  []
 
 [7 <./img/Lucene_Search_Engine_2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 126--129
+Underfull \hbox (badness 10000) in paragraph at lines 135--138
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--133
+Underfull \hbox (badness 10000) in paragraph at lines 139--142
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 134--150
+Underfull \hbox (badness 10000) in paragraph at lines 143--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--150
+Underfull \hbox (badness 10000) in paragraph at lines 143--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--154
+Underfull \hbox (badness 10000) in paragraph at lines 160--163
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 155--159
+Underfull \hbox (badness 10000) in paragraph at lines 164--168
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 173--174
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
 
  []
 
@@ -610,11 +620,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 173--174
 File: img/standard-analyzer-index.png Graphic file (type png)
 
 <use img/standard-analyzer-index.png>
-Package pdftex.def Info: img/standard-analyzer-index.png used on input line 184
+Package pdftex.def Info: img/standard-analyzer-index.png used on input line 193
 .
 (pdftex.def)             Requested size: 284.52756pt x 145.5727pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--189
+Underfull \hbox (badness 10000) in paragraph at lines 188--198
 
  []
 
@@ -623,7 +633,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 179--189
 File: img/simple-analyzer-index.png Graphic file (type png)
 
 <use img/simple-analyzer-index.png>
-Package pdftex.def Info: img/simple-analyzer-index.png used on input line 195.
+Package pdftex.def Info: img/simple-analyzer-index.png used on input line 204.
 (pdftex.def)             Requested size: 284.52756pt x 144.13591pt.
  [13 <./img/simple-analyzer-index.png>]
 <img/whitespace-analyzer-index.png, id=77, 416.757pt x 215.00325pt>
@@ -631,18 +641,18 @@ File: img/whitespace-analyzer-index.png Graphic file (type png)
 
 <use img/whitespace-analyzer-index.png>
 Package pdftex.def Info: img/whitespace-analyzer-index.png used on input line 2
-07.
+16.
 (pdftex.def)             Requested size: 284.52756pt x 146.7875pt.
  [14 <./img/whitespace-analyzer-index.png>] <img/stop-analyzer-index.png, id=82
 , 418.56375pt x 214.401pt>
 File: img/stop-analyzer-index.png Graphic file (type png)
 
 <use img/stop-analyzer-index.png>
-Package pdftex.def Info: img/stop-analyzer-index.png used on input line 219.
+Package pdftex.def Info: img/stop-analyzer-index.png used on input line 228.
 (pdftex.def)             Requested size: 284.52756pt x 145.74167pt.
  [15 <./img/stop-analyzer-index.png>] [16]
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 250--258
+Underfull \hbox (badness 10000) in paragraph at lines 259--267
 
  []
 
@@ -650,92 +660,92 @@ Underfull \hbox (badness 10000) in paragraph at lines 250--258
 File: img/search1_stanAn_3MS.png Graphic file (type png)
 
 <use img/search1_stanAn_3MS.png>
-Package pdftex.def Info: img/search1_stanAn_3MS.png used on input line 263.
+Package pdftex.def Info: img/search1_stanAn_3MS.png used on input line 272.
 (pdftex.def)             Requested size: 170.71652pt x 60.68169pt.
 
 <img/search2_stanAn_2MS.png, id=95, 283.65974pt x 187.902pt>
 File: img/search2_stanAn_2MS.png Graphic file (type png)
 
 <use img/search2_stanAn_2MS.png>
-Package pdftex.def Info: img/search2_stanAn_2MS.png used on input line 266.
+Package pdftex.def Info: img/search2_stanAn_2MS.png used on input line 275.
 (pdftex.def)             Requested size: 170.71652pt x 113.08612pt.
 
 <img/search3_stanAn_1MS.png, id=96, 283.65974pt x 124.0635pt>
 File: img/search3_stanAn_1MS.png Graphic file (type png)
 
 <use img/search3_stanAn_1MS.png>
-Package pdftex.def Info: img/search3_stanAn_1MS.png used on input line 274.
+Package pdftex.def Info: img/search3_stanAn_1MS.png used on input line 283.
 (pdftex.def)             Requested size: 170.71652pt x 74.66583pt.
 
 <img/search4_stanAn_0MS.png, id=97, 281.25075pt x 28.908pt>
 File: img/search4_stanAn_0MS.png Graphic file (type png)
 
 <use img/search4_stanAn_0MS.png>
-Package pdftex.def Info: img/search4_stanAn_0MS.png used on input line 277.
+Package pdftex.def Info: img/search4_stanAn_0MS.png used on input line 286.
 (pdftex.def)             Requested size: 170.71652pt x 17.5465pt.
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 279.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 288.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 279.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 288.
 
 <img/search5_stanAn_5MS.png, id=98, 281.853pt x 34.9305pt>
 File: img/search5_stanAn_5MS.png Graphic file (type png)
 
 <use img/search5_stanAn_5MS.png>
-Package pdftex.def Info: img/search5_stanAn_5MS.png used on input line 285.
+Package pdftex.def Info: img/search5_stanAn_5MS.png used on input line 294.
 (pdftex.def)             Requested size: 170.71652pt x 21.15779pt.
 
 <img/search6_stanAn_1MS.png, id=99, 281.25075pt x 60.82726pt>
 File: img/search6_stanAn_1MS.png Graphic file (type png)
 
 <use img/search6_stanAn_1MS.png>
-Package pdftex.def Info: img/search6_stanAn_1MS.png used on input line 288.
+Package pdftex.def Info: img/search6_stanAn_1MS.png used on input line 297.
 (pdftex.def)             Requested size: 170.71652pt x 36.92079pt.
  [18 <./img/search1_stanAn_3MS.png> <./img/search2_stanAn_2MS.png>]
 <img/search1_simAn_28.png, id=105, 287.8755pt x 94.55325pt>
 File: img/search1_simAn_28.png Graphic file (type png)
 
 <use img/search1_simAn_28.png>
-Package pdftex.def Info: img/search1_simAn_28.png used on input line 298.
+Package pdftex.def Info: img/search1_simAn_28.png used on input line 307.
 (pdftex.def)             Requested size: 170.71652pt x 56.07448pt.
 
 <img/search2_simAn_0.png, id=106, 278.84175pt x 264.99pt>
 File: img/search2_simAn_0.png Graphic file (type png)
 
 <use img/search2_simAn_0.png>
-Package pdftex.def Info: img/search2_simAn_0.png used on input line 301.
+Package pdftex.def Info: img/search2_simAn_0.png used on input line 310.
 (pdftex.def)             Requested size: 170.71652pt x 162.24208pt.
 
 <img/search3_simAn_4.png, id=107, 278.84175pt x 118.64325pt>
 File: img/search3_simAn_4.png Graphic file (type png)
 
 <use img/search3_simAn_4.png>
-Package pdftex.def Info: img/search3_simAn_4.png used on input line 309.
+Package pdftex.def Info: img/search3_simAn_4.png used on input line 318.
 (pdftex.def)             Requested size: 170.71652pt x 72.6402pt.
 
 <img/search4_simAn_0.png, id=108, 282.45525pt x 48.78226pt>
 File: img/search4_simAn_0.png Graphic file (type png)
 
 <use img/search4_simAn_0.png>
-Package pdftex.def Info: img/search4_simAn_0.png used on input line 312.
+Package pdftex.def Info: img/search4_simAn_0.png used on input line 321.
 (pdftex.def)             Requested size: 170.71652pt x 29.48393pt.
 
 <img/search5_simAn_15.png, id=109, 281.25075pt x 33.726pt>
 File: img/search5_simAn_15.png Graphic file (type png)
 
 <use img/search5_simAn_15.png>
-Package pdftex.def Info: img/search5_simAn_15.png used on input line 320.
+Package pdftex.def Info: img/search5_simAn_15.png used on input line 329.
 (pdftex.def)             Requested size: 170.71652pt x 20.47092pt.
 
 <img/search6_simAn_0.png, id=110, 282.45525pt x 65.64525pt>
 File: img/search6_simAn_0.png Graphic file (type png)
 
 <use img/search6_simAn_0.png>
-Package pdftex.def Info: img/search6_simAn_0.png used on input line 323.
+Package pdftex.def Info: img/search6_simAn_0.png used on input line 332.
 (pdftex.def)             Requested size: 170.71652pt x 39.67592pt.
 
 
@@ -751,35 +761,35 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: img/search1_whiAn_4.PNG Graphic file (type png)
 
 <use img/search1_whiAn_4.PNG>
-Package pdftex.def Info: img/search1_whiAn_4.PNG used on input line 333.
+Package pdftex.def Info: img/search1_whiAn_4.PNG used on input line 342.
 (pdftex.def)             Requested size: 170.71652pt x 25.73433pt.
 
 <img/search2_whiAn_16.PNG, id=122, 277.63725pt x 48.78226pt>
 File: img/search2_whiAn_16.PNG Graphic file (type png)
 
 <use img/search2_whiAn_16.PNG>
-Package pdftex.def Info: img/search2_whiAn_16.PNG used on input line 336.
+Package pdftex.def Info: img/search2_whiAn_16.PNG used on input line 345.
 (pdftex.def)             Requested size: 170.71652pt x 29.9968pt.
 
 <img/search3_whiAn_4.PNG, id=123, 282.45525pt x 41.55525pt>
 File: img/search3_whiAn_4.PNG Graphic file (type png)
 
 <use img/search3_whiAn_4.PNG>
-Package pdftex.def Info: img/search3_whiAn_4.PNG used on input line 344.
+Package pdftex.def Info: img/search3_whiAn_4.PNG used on input line 353.
 (pdftex.def)             Requested size: 170.71652pt x 25.11594pt.
 
 <img/search4_whiAn_16.PNG, id=124, 280.6485pt x 34.32825pt>
 File: img/search4_whiAn_16.PNG Graphic file (type png)
 
 <use img/search4_whiAn_16.PNG>
-Package pdftex.def Info: img/search4_whiAn_16.PNG used on input line 347.
+Package pdftex.def Info: img/search4_whiAn_16.PNG used on input line 356.
 (pdftex.def)             Requested size: 170.71652pt x 20.88203pt.
 
 <img/search6_whiAn_15.PNG, id=125, 283.0575pt x 35.53275pt>
 File: img/search6_whiAn_15.PNG Graphic file (type png)
 
 <use img/search6_whiAn_15.PNG>
-Package pdftex.def Info: img/search6_whiAn_15.PNG used on input line 355.
+Package pdftex.def Info: img/search6_whiAn_15.PNG used on input line 364.
 (pdftex.def)             Requested size: 170.71652pt x 21.43094pt.
  [20 <./img/search3_simAn_4.png> <./img/search4_simAn_0.png> <./img/search5_sim
 An_15.png> <./img/search6_simAn_0.png> <./img/search1_whiAn_4.PNG> <./img/searc
@@ -789,78 +799,689 @@ g/search6_whiAn_15.PNG>]
 File: img/search1_stoAn_16.PNG Graphic file (type png)
 
 <use img/search1_stoAn_16.PNG>
-Package pdftex.def Info: img/search1_stoAn_16.PNG used on input line 366.
+Package pdftex.def Info: img/search1_stoAn_16.PNG used on input line 375.
 (pdftex.def)             Requested size: 170.71652pt x 55.08322pt.
 
 <img/search2_stoAn_0.PNG, id=139, 283.0575pt x 190.311pt>
 File: img/search2_stoAn_0.PNG Graphic file (type png)
 
 <use img/search2_stoAn_0.PNG>
-Package pdftex.def Info: img/search2_stoAn_0.PNG used on input line 369.
+Package pdftex.def Info: img/search2_stoAn_0.PNG used on input line 378.
 (pdftex.def)             Requested size: 170.71652pt x 114.78276pt.
 
 <img/search3_stoAn_16.PNG, id=140, 279.444pt x 121.6545pt>
 File: img/search3_stoAn_16.PNG Graphic file (type png)
 
 <use img/search3_stoAn_16.PNG>
-Package pdftex.def Info: img/search3_stoAn_16.PNG used on input line 377.
+Package pdftex.def Info: img/search3_stoAn_16.PNG used on input line 386.
 (pdftex.def)             Requested size: 170.71652pt x 74.3205pt.
 
 <img/search4_stoAn_0.PNG, id=141, 281.853pt x 28.908pt>
 File: img/search4_stoAn_0.PNG Graphic file (type png)
 
 <use img/search4_stoAn_0.PNG>
-Package pdftex.def Info: img/search4_stoAn_0.PNG used on input line 380.
+Package pdftex.def Info: img/search4_stoAn_0.PNG used on input line 389.
 (pdftex.def)             Requested size: 170.71652pt x 17.50989pt.
 
 <img/search5_stoAn_16.PNG, id=142, 277.035pt x 28.908pt>
 File: img/search5_stoAn_16.PNG Graphic file (type png)
 
 <use img/search5_stoAn_16.PNG>
-Package pdftex.def Info: img/search5_stoAn_16.PNG used on input line 388.
+Package pdftex.def Info: img/search5_stoAn_16.PNG used on input line 397.
 (pdftex.def)             Requested size: 170.71652pt x 17.81381pt.
 
 <img/search6_stoAn_15.PNG, id=143, 280.6485pt x 49.3845pt>
 File: img/search6_stoAn_15.PNG Graphic file (type png)
 
 <use img/search6_stoAn_15.PNG>
-Package pdftex.def Info: img/search6_stoAn_15.PNG used on input line 391.
+Package pdftex.def Info: img/search6_stoAn_15.PNG used on input line 400.
 (pdftex.def)             Requested size: 170.71652pt x 30.04085pt.
  [21 <./img/search1_stoAn_16.PNG> <./img/search2_stoAn_0.PNG> <./img/search3_st
 oAn_16.PNG> <./img/search4_stoAn_0.PNG> <./img/search5_stoAn_16.PNG> <./img/sea
 rch6_stoAn_15.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 398--417
+Underfull \hbox (badness 10000) in paragraph at lines 407--426
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 398--417
+Underfull \hbox (badness 10000) in paragraph at lines 407--426
 
  []
 
-[22] (./Information_Retrieval.aux) ) 
+[22] <img/shazam_logo.png, id=157, 220.825pt x 52.195pt>
+File: img/shazam_logo.png Graphic file (type png)
+
+<use img/shazam_logo.png>
+Package pdftex.def Info: img/shazam_logo.png used on input line 433.
+(pdftex.def)             Requested size: 199.16928pt x 47.0786pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 430--440
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 441--444
+
+ []
+
+[23 <./img/shazam_logo.png>] [24]
+Kapitel 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 447--454
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 447--454
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 447--454
+
+ []
+
+[25
+
+] (./Information_Retrieval.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 455--1
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 455--1
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 455--1
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 455--1
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 455--1
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 455--1
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 455--1
+
+ []
+
+[26
+
+]
+Underfull \hbox (badness 2707) in paragraph at lines 41--47
+[]\OT1/cmr/m/n/12 flaviomartins.  Ana-ly-ze-ru-tils.java.  Web-sei-te.  $\OT1/c
+mtt/m/n/12 https : / / github . com / behas /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--47
+\OT1/cmtt/m/n/12 lucene-[]skos / blob / master / src / test / java / at / ac / 
+univie / mminf / luceneSKOS /
+ []
+
+
+Underfull \hbox (badness 1997) in paragraph at lines 49--54
+[]\OT1/cmr/m/n/12 Fraunhfer-Gesellschaft.  []akus-ti-scher fin-ger-ab-druck"ver
+r[]at mu-sik-ti-tel.  Web-sei-
+ []
+
+[27
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 94--100
+[]\OT1/cmr/m/n/12 Martin Wei-gert.  Shaz-am hat mehr als 400 mil-lio-nen nut-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--100
+\OT1/cmr/m/n/12 zer.  Web-sei-te.  $\OT1/cmtt/m/n/12 http : / / netzwertig . co
+m / 2013 / 12 / 09 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--100
+\OT1/cmtt/m/n/12 musikalischer-[]riese-[]shazam-[]hat-[]mehr-[]als-[]400-[]mill
+ionen-[]nutzer/$ \OT1/cmr/m/n/12 be-sucht
+ []
+
+) [28] [29
+
+
+] (/usr/share/texlive/texmf-dist/tex/latex/base/latin1.def
+File: latin1.def 2008/03/30 v1.1d Input encoding file
+)
+Anhang A.
+(../Search_Engine/src/ch/phischa/Main.java) [30
+
+]
+Anhang B.
+(../Search_Engine/src/ch/phischa/GUI.java [31
+
+] [32]
+Overfull \hbox (53.92787pt too wide) in paragraph at lines 77--78
+[][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (11.62794pt too wide) in paragraph at lines 80--82
+[][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (39.8279pt too wide) in paragraph at lines 83--84
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (4.57796pt too wide) in paragraph at lines 84--85
+[][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (180.82765pt too wide) in paragraph at lines 85--86
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (469.87715pt too wide) in paragraph at lines 86--87
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (258.37752pt too wide) in paragraph at lines 87--88
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (124.42775pt too wide) in paragraph at lines 88--89
+[][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (201.97762pt too wide) in paragraph at lines 90--91
+[][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (32.77791pt too wide) in paragraph at lines 91--92
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (96.2278pt too wide) in paragraph at lines 92--93
+[][][][][][][][][] 
+ []
+
+
+Overfull \hbox (505.12709pt too wide) in paragraph at lines 97--98
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (4.57796pt too wide) in paragraph at lines 101--102
+[][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (110.32777pt too wide) in paragraph at lines 103--104
+[][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (223.12758pt too wide) in paragraph at lines 104--105
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+[33]
+Overfull \hbox (4.57796pt too wide) in paragraph at lines 117--118
+[][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (39.8279pt too wide) in paragraph at lines 121--122
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (4.57796pt too wide) in paragraph at lines 122--123
+[][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (180.82765pt too wide) in paragraph at lines 123--124
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (230.17757pt too wide) in paragraph at lines 124--125
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (11.62794pt too wide) in paragraph at lines 125--126
+[][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (187.87764pt too wide) in paragraph at lines 126--127
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (244.27754pt too wide) in paragraph at lines 138--139
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (265.4275pt too wide) in paragraph at lines 139--140
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (216.07759pt too wide) in paragraph at lines 140--141
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (237.22755pt too wide) in paragraph at lines 141--143
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[34]
+Overfull \hbox (11.62794pt too wide) in paragraph at lines 160--161
+[][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (39.8279pt too wide) in paragraph at lines 164--165
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (4.57796pt too wide) in paragraph at lines 165--166
+[][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (60.97786pt too wide) in paragraph at lines 169--170
+[][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (4.57796pt too wide) in paragraph at lines 176--178
+[][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (18.67793pt too wide) in paragraph at lines 179--180
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (4.57796pt too wide) in paragraph at lines 180--181
+[][][][][][][][][][][][][][] 
+ []
+
+) [35]
+Anhang C.
+(../Search_Engine/src/ch/phischa/Searcher.java
+Overfull \hbox (152.6277pt too wide) in paragraph at lines 28--30
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (89.17781pt too wide) in paragraph at lines 30--31
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[36
+
+]
+Overfull \hbox (60.97786pt too wide) in paragraph at lines 32--34
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (18.67793pt too wide) in paragraph at lines 35--36
+[][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (4.57796pt too wide) in paragraph at lines 37--38
+[][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (4.57796pt too wide) in paragraph at lines 40--41
+[][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (406.42726pt too wide) in paragraph at lines 46--47
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (82.12782pt too wide) in paragraph at lines 48--49
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (4.57796pt too wide) in paragraph at lines 50--52
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (25.72792pt too wide) in paragraph at lines 54--55
+[][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (942.22633pt too wide) in paragraph at lines 56--57
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+
+ []
+
+
+Overfull \hbox (18.67793pt too wide) in paragraph at lines 58--59
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (899.9264pt too wide) in paragraph at lines 60--61
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+
+ []
+
+
+Overfull \hbox (32.77791pt too wide) in paragraph at lines 62--63
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (914.02638pt too wide) in paragraph at lines 64--65
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+
+ []
+
+
+Overfull \hbox (928.12636pt too wide) in paragraph at lines 68--69
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+
+ []
+
+[37]
+Overfull \hbox (307.72743pt too wide) in paragraph at lines 78--80
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (18.67793pt too wide) in paragraph at lines 84--85
+[][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (46.87788pt too wide) in paragraph at lines 90--91
+[][][][][][][][][][][][][][][] 
+ []
+
+) [38]
+Anhang D.
+(../Search_Engine/src/ch/phischa/Index.java [39
+
+]
+Overfull \hbox (11.62794pt too wide) in paragraph at lines 41--42
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (25.72792pt too wide) in paragraph at lines 53--54
+[][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (272.4775pt too wide) in paragraph at lines 63--64
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][] 
+ []
+
+
+Overfull \hbox (124.42775pt too wide) in paragraph at lines 68--69
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (25.72792pt too wide) in paragraph at lines 70--72
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+[40]
+Overfull \hbox (512.17708pt too wide) in paragraph at lines 74--75
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (469.87715pt too wide) in paragraph at lines 78--79
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (483.97713pt too wide) in paragraph at lines 82--83
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (498.0771pt too wide) in paragraph at lines 86--87
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (75.07784pt too wide) in paragraph at lines 103--104
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (110.32777pt too wide) in paragraph at lines 111--112
+[][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (350.02736pt too wide) in paragraph at lines 113--115
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][] 
+ []
+
+[41]
+Overfull \hbox (75.07784pt too wide) in paragraph at lines 127--128
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (4.57796pt too wide) in paragraph at lines 137--139
+[][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (244.27754pt too wide) in paragraph at lines 140--141
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (307.72743pt too wide) in paragraph at lines 141--142
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (350.02736pt too wide) in paragraph at lines 142--143
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (314.77742pt too wide) in paragraph at lines 143--144
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (314.77742pt too wide) in paragraph at lines 144--145
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (300.67744pt too wide) in paragraph at lines 145--146
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (342.97737pt too wide) in paragraph at lines 146--148
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (39.8279pt too wide) in paragraph at lines 154--155
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+[42]) [43]
+Anhang E.
+(../Search_Engine/src/ch/phischa/AnalyzerDemo.java
+Overfull \hbox (448.72719pt too wide) in paragraph at lines 14--15
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][] 
+ []
+
+
+Overfull \hbox (18.67793pt too wide) in paragraph at lines 16--17
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (519.22707pt too wide) in paragraph at lines 17--18
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[44
+
+]
+Overfull \hbox (25.72792pt too wide) in paragraph at lines 32--33
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (11.62794pt too wide) in paragraph at lines 34--36
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (60.97786pt too wide) in paragraph at lines 38--39
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (4.57796pt too wide) in paragraph at lines 39--40
+[][][][][][][][][][][][][][][][][][][][][][][]
+ []
+
+
+Overfull \hbox (25.72792pt too wide) in paragraph at lines 41--42
+[][][][][][][][][][][] 
+ []
+
+) [45]
+Anhang F.
+(../Search_Engine/src/ch/phischa/AnalyzerUtils.java
+Overfull \hbox (18.67793pt too wide) in paragraph at lines 8--9
+[][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (4.57796pt too wide) in paragraph at lines 9--10
+[][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (11.62794pt too wide) in paragraph at lines 10--11
+[][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (82.12782pt too wide) in paragraph at lines 11--12
+[][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (4.57796pt too wide) in paragraph at lines 16--17
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (4.57796pt too wide) in paragraph at lines 20--21
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (75.07784pt too wide) in paragraph at lines 22--24
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (68.02785pt too wide) in paragraph at lines 26--28
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (60.97786pt too wide) in paragraph at lines 28--29
+[][][][][][][][][][][][][][][][][] 
+ []
+
+[46
+
+]
+Overfull \hbox (96.2278pt too wide) in paragraph at lines 35--36
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (60.97786pt too wide) in paragraph at lines 41--42
+[][][][][][][][][][][][][][][][][] 
+ []
+
+) [47] (./Information_Retrieval.aux) ) 
 Here is how much of TeX's memory you used:
- 4693 strings out of 494935
- 63840 string characters out of 6178122
- 126512 words of memory out of 5000000
- 7813 multiletter control sequences out of 15000+600000
- 10746 words of font info for 39 fonts, out of 8000000 for 9000
+ 4873 strings out of 494935
+ 66779 string characters out of 6178122
+ 149974 words of memory out of 5000000
+ 7962 multiletter control sequences out of 15000+600000
+ 10914 words of font info for 40 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 38i,10n,32p,932b,965s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Information_Retrieval.pdf (26 pages, 365194 bytes).
+ 38i,10n,32p,932b,1968s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Information_Retrieval.pdf (51 pages, 445880 bytes).
 PDF statistics:
- 190 PDF objects out of 1000 (max. 8388607)
- 90 compressed objects within 1 object stream
+ 278 PDF objects out of 1000 (max. 8388607)
+ 149 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 166 words of extra memory for PDF output out of 10000 (max. 10000000)
 

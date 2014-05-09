@@ -1,0 +1,101 @@
+\begin{thebibliography}{10}
+
+\bibitem{fingerabdruck}
+Diverse.
+\newblock Akustischer fingerabdruck.
+\newblock Webseite.
+\newblock \url{http://de.wikipedia.org/wiki/Akustischer_Fingerabdruck} besucht
+  am 09.05.2014.
+
+\bibitem{id31}
+Diverse.
+\newblock Id3-tag.
+\newblock Webseite.
+\newblock \url{http://de.wikipedia.org/wiki/ID3-Tag} besucht am 07.05.2014.
+
+\bibitem{mp3}
+Diverse.
+\newblock Mp3.
+\newblock Webseite.
+\newblock \url{http://de.wikipedia.org/wiki/MP3} besucht am 09.05.2014.
+
+\bibitem{query}
+Diverse.
+\newblock Query.
+\newblock Webseite.
+\newblock \url{http://de.wikipedia.org/wiki/Query} besucht am 09.05.2014.
+
+\bibitem{shazam1}
+Diverse.
+\newblock Shazam (dienst).
+\newblock Webseite.
+\newblock \url{http://de.wikipedia.org/wiki/Shazam_(Dienst)} besucht am
+  09.05.2014.
+
+\bibitem{lucene2}
+Mike~McCandless Erik~Hatcher, Otis~Gospodnetic.
+\newblock {\em Lucene in Action}.
+\newblock Manning, 2010.
+
+\bibitem{anut}
+flaviomartins.
+\newblock Analyzerutils.java.
+\newblock Webseite.
+\newblock
+  \url{https://github.com/behas/lucene-skos/blob/master/src/test/java/at/ac/univie/mminf/luceneSKOS/util/AnalyzerUtils.java}
+  besucht am 07.05.2014.
+
+\bibitem{scinexx2}
+Fraunhfer-Gesellschaft.
+\newblock "akustischer fingerabdruck" verrät musiktitel.
+\newblock Webseite.
+\newblock \url{http://www.scinexx.de/wissen-aktuell-1802-2004-10-26.html}
+  besucht am 09.05.2014.
+
+\bibitem{modinf}
+Berthier Ribeiro-Neto Ricardo Baeza-Yates.
+\newblock {\em Modern Information Retrieval - the concepts and technology
+  behind search}.
+\newblock Addison Wesley, 2011.
+
+\bibitem{scinexx1}
+Edda Schlager.
+\newblock Kampf der namenlosen ohrwürmer.
+\newblock Webseite.
+\newblock \url{http://www.scinexx.de/dossier-detail-341-11.html} besucht am
+  09.05.2014.
+
+\bibitem{tika}
+Unknown.
+\newblock Apache tika.
+\newblock Webseite.
+\newblock \url{http://tika.apache.org/} besucht am 07.05.2014.
+
+\bibitem{id32}
+Unknown.
+\newblock Id3v2.
+\newblock Webseite.
+\newblock \url{http://www.id3.org} besucht am 07.05.2014.
+
+\bibitem{jaudiotagger}
+Unknown.
+\newblock Jaudiotagger.
+\newblock Webseite.
+\newblock \url{http://www.jthink.net/jaudiotagger/} besucht am 04.05.2014.
+
+\bibitem{lucene1}
+Unknown.
+\newblock Lucene intro.
+\newblock Webseite.
+\newblock \url{https://today.java.net/pub/a/today/2003/07/30/LuceneIntro.html}
+  besucht am 04.05.2014.
+
+\bibitem{netzwertig}
+Martin Weigert.
+\newblock Shazam hat mehr als 400 millionen nutzer.
+\newblock Webseite.
+\newblock
+  \url{http://netzwertig.com/2013/12/09/musikalischer-riese-shazam-hat-mehr-als-400-millionen-nutzer/}
+  besucht am 09.05.2014.
+
+\end{thebibliography}

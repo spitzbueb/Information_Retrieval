@@ -1,5 +1,40 @@
 \select@language {ngerman}
 \contentsline {chapter}{\numberline {1}Einleitung}{1}
 \contentsline {chapter}{\numberline {2}Hauptteil}{2}
+\contentsline {section}{\numberline {2.1}Lucene}{2}
+\contentsline {section}{\numberline {2.2}Information Retrieval}{3}
+\contentsline {section}{\numberline {2.3}Lucene Search Engine}{4}
+\contentsline {subsection}{\numberline {2.3.1}Das GUI}{5}
+\contentsline {subsubsection}{Indexieren}{5}
+\contentsline {subsubsection}{Suchen}{6}
+\contentsline {subsection}{\numberline {2.3.2}Der Indexer}{8}
+\contentsline {subsection}{\numberline {2.3.3}Der Searcher}{8}
+\contentsline {subsection}{\numberline {2.3.4}ID3-Tags}{9}
+\contentsline {subsubsection}{Manuelles extrahieren}{9}
+\contentsline {subsubsection}{Tika}{9}
+\contentsline {subsubsection}{Extraktion mit Library}{10}
+\contentsline {section}{\numberline {2.4}Analyse der Leistung}{11}
+\contentsline {subsection}{\numberline {2.4.1}Vorbereitung}{11}
+\contentsline {subsubsection}{Testmenge}{11}
+\contentsline {subsection}{\numberline {2.4.2}Zeitmessung}{11}
+\contentsline {subsubsection}{Standard Analyzer}{11}
+\contentsline {subsubsection}{Simple Analyzer}{12}
+\contentsline {subsubsection}{Whitespace Analyzer}{13}
+\contentsline {subsubsection}{Stop Analyzer}{14}
+\contentsline {subsubsection}{Fazit Indexierungsdauer}{15}
+\contentsline {subsection}{\numberline {2.4.3}Suchmessung}{16}
 \contentsline {subsubsection}{Standard Analyzer}{18}
 \contentsline {subsubsection}{Whitespace Analyzer}{20}
+\contentsline {subsubsection}{Auswertung und Fazit}{22}
+\contentsline {section}{\numberline {2.5}Suchen nach Musikmustern}{23}
+\contentsline {subsection}{\numberline {2.5.1}Shazam}{23}
+\contentsline {subsubsection}{Der akustische Fingerabdruck}{23}
+\contentsline {subsubsection}{Spektrale Flachheit}{24}
+\contentsline {chapter}{\numberline {3}Fazit}{25}
+\contentsline {chapter}{Appendices}{29}
+\contentsline {chapter}{\numberline {A}Main.java}{30}
+\contentsline {chapter}{\numberline {B}GUI.java}{31}
+\contentsline {chapter}{\numberline {C}Searcher.java}{36}
+\contentsline {chapter}{\numberline {D}Index.java}{39}
+\contentsline {chapter}{\numberline {E}AnalyzerDemo.java}{44}
+\contentsline {chapter}{\numberline {F}AnalyzerUtils.java}{46}
