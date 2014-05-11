@@ -11,7 +11,7 @@
 \contentsline {subsection}{\numberline {2.3.3}Der Searcher}{8}
 \contentsline {subsection}{\numberline {2.3.4}ID3-Tags}{9}
 \contentsline {subsubsection}{Manuelles extrahieren}{9}
-\contentsline {subsubsection}{Tika}{9}
+\contentsline {subsubsection}{Tika}{10}
 \contentsline {subsubsection}{Extraktion mit Library}{10}
 \contentsline {section}{\numberline {2.4}Analyse der Leistung}{11}
 \contentsline {subsection}{\numberline {2.4.1}Vorbereitung}{11}

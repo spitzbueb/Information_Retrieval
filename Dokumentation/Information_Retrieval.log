@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.20)  9 MAY 2014 18:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.20)  11 MAY 2014 20:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -539,6 +539,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--77
 
  []
 
+
+Overfull \hbox (18.74318pt too wide) in paragraph at lines 72--77
+\OT1/cmr/m/n/12 Ein Grund-pro-blem bei IR-Systemen ist, zu be-stim-men wel-che 
+In-for-ma-tio-nen f[]ur die gew[]unschte
+ []
+
 [3]
 Underfull \hbox (badness 10000) in paragraph at lines 78--81
 
@@ -592,6 +598,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 139--142
  []
 
 [8]
+Underfull \hbox (badness 10000) in paragraph at lines 143--159
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 143--159
 
  []
@@ -839,6 +850,11 @@ Package pdftex.def Info: img/search6_stoAn_15.PNG used on input line 400.
  [21 <./img/search1_stoAn_16.PNG> <./img/search2_stoAn_0.PNG> <./img/search3_st
 oAn_16.PNG> <./img/search4_stoAn_0.PNG> <./img/search5_stoAn_16.PNG> <./img/sea
 rch6_stoAn_15.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 407--426
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 407--426
 
  []
@@ -1478,7 +1494,7 @@ re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Information_Retrieval.pdf (51 pages, 445880 bytes).
+Output written on Information_Retrieval.pdf (51 pages, 446259 bytes).
 PDF statistics:
  278 PDF objects out of 1000 (max. 8388607)
  149 compressed objects within 2 object streams
