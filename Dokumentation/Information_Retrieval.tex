@@ -13,6 +13,7 @@
 \usepackage{color}
 \usepackage{amsmath}
 \usepackage[toc,page]{appendix}
+\usepackage{appendix}
 \author{Philipp Schalcher}
 \title{Evaluierung der Retrieval-Leistung einer Search Engine am Beispiel einer privaten MP3-Sammlung}
 \date{\today}
@@ -25,7 +26,7 @@ Ich möchte mich an dieser Stelle bei allen bedanken, die mich bei dieser Arbeit
 unterstützt haben.
 An erster Stelle bedanke ich mich bei Frau Ruxandra Domenig. Das spannende Thema zur Evaluierung der Retrieval Leistung von Lucene anhand MP3-Dateien wurde von Beispielen aus ihrer Sammlung inspiriert. Auch der kleine Exkurs über die Suche nach Ton wurde von ihr vorgeschlagen. Dafür möchte ich mich nochmals herzlich bedanken.\\
 \\
-Dann möchte ich Ramona Heiz danken, welche mir als Lektorin gedient hat. Ohne sie wäre dieses Dokument wahrscheinlich unlesbar geworden. Geduldig arbeitete sie sich durch das Dokument und half mir das Bestmöglichste hervorzubringen. Danke für deine Geduld und Arbeit.
+Dann möchte ich Ramona Heiz, Doris Oberholzer und Yvonne Schalcher danken, welche mir als Lektorinnen gedient haben. Ohne sie wäre dieses Dokument wahrscheinlich unlesbar geworden. Geduldig arbeiteten sie sich durch das Dokument und halfen mir das Bestmöglichste hervorzubringen. Danke für eure Geduld und Arbeit.
 \tableofcontents
 \begin{abstract}
 Google hat es vor gemacht und revolutionierte den Gebrauch des Internets mit ihrer Suchmaschine. Die Benutzer haben sich mittlerweile so fest daran gewöhnt (immerhin entstand das Verb googlen), dass sie diesen Komfort nicht mehr missen möchten.\\
@@ -79,7 +80,7 @@ Information Retrieval Systeme müssen komplexe Anforderungen erfüllen. Mit den 
 \\
 Lucene ist genau solch ein IR-System. Dieses System soll nun analysiert werden. Darunter fällt die Analyse der verschiedenen Analyzer. Konkret handelt es sich um den Standard Analyzer, den Whitespace Analyzer, den Stop Analyzer und den Simple Analyzer. Hier möchte ich mich darauf konzentrieren, wie genau die Informationen in den Index gespeichert werden. Ein ebenfalls wichtiger Faktor ist die Zeit. Einerseits die Dauer der Indexerstellung und danach die Dauer der Suche mit den verschiedenen Einstellungen. Als Letztes möchte ich mich um die Analyse des Ergebnisses kümmern, wobei ich eine Testmenge an MP3 benutze um damit die tatsächlichen Suchergebnisse mit der erwarteten Menge zu vergleichen.
 \section{Lucene Search Engine}
-Das entwickelte Programm hat den Namen \textquotedblleft Lucene Search Engine\textquotedblright und wurde in Java entwickelt. Im Programm kann unter dem Punkt \textquotedblleft Pfad\textquotedblright der Ablageort der MP3-Dateien angegeben werden. Mit dem Button Index wird dann in diesem Pfad ein Ordner Index erstellt, in welchem der Lucene-Index erstellt wird. Dabei durchsucht das Programm alle MP3-Dateien im angegeben Pfad, wie auch in Unterordnern. Aus diesen Dateien werden dann die Informationen Titel, Album, Künstler, Jahr, Songtext, Pfad und Dateiname extrahiert und in den Index geschrieben. Gesucht wird dann in den Feldern Titel, Album, Künstler, Jahr, Songtext und Dateiname. Als Ergebnis wird der Pfad zur entsprechenden Dateien ausgegeben.
+Das entwickelte Programm hat den Namen \textquotedblleft Lucene Search Engine\textquotedblright und wurde in Java entwickelt. Im Programm kann unter dem Punkt \textquotedblleft Pfad\textquotedblright der Ablageort der MP3-Dateien angegeben werden. Mit dem Button Index wird dann in diesem Pfad ein Ordner Index eröffnet, in welchem der Lucene-Index erstellt wird. Dabei durchsucht das Programm alle MP3-Dateien im angegeben Pfad, wie auch in Unterordnern. Aus diesen Dateien werden  die Informationen Titel, Album, Künstler, Jahr, Songtext, Pfad und Dateiname extrahiert und in den Index geschrieben. Gesucht wird dann in den Feldern Titel, Album, Künstler, Jahr, Songtext und Dateiname. Als Ergebnis wird der Pfad zur entsprechenden Datei ausgegeben.
 \newpage
 \subsection{Das GUI}
 In diesem Abschnitt möchte ich ganz kurz die grafische Benutzeroberfläche erläutern. Ich gehe nicht weiter auf die Programmierung ein, da dies nur ein kleiner, eher unwichtiger Teil der Search Engine ist.
@@ -91,7 +92,7 @@ In diesem Abschnitt möchte ich ganz kurz die grafische Benutzeroberfläche erl�
 \footnotetext{Quelle: Screenshot}
 Zuerst betrachten wir die Menüleiste. Unter dem Punkt Datei ist nichts weiteres zu finden als ein Punkt \textquotedblleft Schliessen\textquotedblright der das Programm beendet. Interessanter ist da der Punkt Einstellungen. Öffnet man diesen, erhält man eine Auswahl der 4 erwähnten Analyzer. Je nach Auswahl wird der Index auf andere Weise erstellt und die Suche durchgeführt. Es kann jeweils nur ein Analyzer ausgewählt werden. Falls man ihn ändert sollte man auch den Index neu erstellen.
 \subsubsection{Indexieren}
-Am unteren Rand der Applikation befindet sich das Feld Pfad. Dort wird der Pfad zu den abgelegten Dateien eingefügt. Dies funktioniert für Linux wie für Windows und Mac. Sobald dies erledigt wurde, kann mit dem Knopf die Indexierung gestartet werden. Als Analyzer wird die Auswahl aus den Einstellungen genommen. Der Index wird im gleichen Pfad erstellt und in einem Unterordner mit dem Namen \textquotedblleft Index\textquotedblright abgelegt. Dies geschieht automatisch und kann nicht geändert werden. Sobald die Indexierung beendet ist, wird auf der rechten Seite die Dauer in Millisekunden angezeigt. Je mehr MP3-Dateien indexiert werden müssen, desto länger dauert der Vorgang.
+Am unteren Rand der Applikation befindet sich das Feld Pfad. Dort wird der Pfad zu den abgelegten Dateien eingefügt. Dies funktioniert für Linux wie für Windows und Mac. Sobald dies erledigt ist, kann mit dem Knopf die Indexierung gestartet werden. Als Analyzer wird die Auswahl aus den Einstellungen genommen. Der Index wird im gleichen Pfad erstellt und in einem Unterordner mit dem Namen \textquotedblleft Index\textquotedblright abgelegt. Dies geschieht automatisch und kann nicht geändert werden. Sobald die Indexierung beendet ist, wird auf der rechten Seite die Dauer in Millisekunden angezeigt. Je mehr MP3-Dateien indexiert werden müssen, desto länger dauert der Vorgang.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=10cm]{img/Pfadangabe.png}
@@ -177,7 +178,7 @@ tag.getFirst(FieldKey.TITLE)
 Mit diesem Befehl wird der spezifische Eintrag bei Titel gelesen. Diese kann dann direkt beim Indexer in ein Feld für den Typ Document gespeichert werden. Natürlich kann anstatt TITLE auch ALBUM, YEAR, ARTIST, usw. genutzt werden. Somit habe ich alle relevanten Informationen aus den Dateien extrahiert und in meinen Index geschrieben.
 \newpage
 \section{Analyse der Leistung}
-Die Suchleistung der Engine möchte ich über zwei Werte vergleichen. Einerseits wäre das natürlich die Zeit, welche benötigt wird, um zu indexieren und zu suchen. Andererseits muss auch das Ergebnis überprüft werden, ob auch die erwarteten Resultate zurückgegeben werden. Die Algorithmen welche verwendet werden, sind bei Lucene die Analyzer. Daher werde ich die vier gezeigten Analyzer überprüfen und danach die Werte vergleichen und ein Fazit ziehen.
+Die Suchleistung der Engine möchte ich über zwei Werte vergleichen. Einerseits wäre das natürlich die Zeit, welche benötigt wird, um zu indexieren und zu suchen. Andererseits muss auch das Ergebnis überprüft werden, ob auch die erwarteten Resultate zurückgegeben werden. Die Algorithmen welche verwendet werden, sind bei Lucene die Analyzer. Daher werde ich die vier gezeigten Analyzer überprüfen,  danach die Werte vergleichen und ein Fazit ziehen.
 \subsection{Vorbereitung}
 Um eine korrekte Messung zu bekommen, müssen für alle Analyzer die gleichen Voraussetzungen herrschen. Das heisst, dass auf einem USB-Stick eine Auswahl an Dateien gespeichert sind. Diese werden indexiert (ergibt ersten Wert). Dann wird dieser Index (der danach ebenfalls auf dem USB-Stick liegt) mit bestimmten Suchabfragen gefüttert, um dann die Ergebnisse und die benötigte Zeit zu bekommen. Die Tests werden unter Windows 8.1 durchgeführt, auf einem Notebook mit einer 256GB Solid State Disk. Der USB-Stick besitzt 8GB Speicherplatz und ist von der Marke disk2go.com.\\
 \subsubsection{Testmenge}
@@ -206,7 +207,7 @@ Der Index-Ordner wird auf dem USB-Stick wieder gelöscht und erneut erstellt mit
 \end{figure}
 \footnotetext{Quelle: Screenshot}
 \\
-Auch hier können wir vom Screenshot wieder ablesen, dass die Indexierung insgesamt 5294 Millisekunden gedauert hat. Die Arbeiten, die das Programm machen musste, waren die Selben wie schon beim Standard Analyzer. In Sekunden umgerechnet dauerte das Indexieren also ungefähr 5,3 Sekunden. Wie erwartet war dieser Analyzer schneller als der Vorherige.
+Auch hier können wir vom Screenshot wieder ablesen, dass die Indexierung insgesamt 5294 Millisekunden gedauert hat. Die Arbeiten, die das Programm machen musste, waren die Gleichen wie schon beim Standard Analyzer. In Sekunden umgerechnet dauerte das Indexieren also ungefähr 5,3 Sekunden. Wie erwartet war dieser Analyzer schneller als der Vorherige.
 \subsubsection{Whitespace Analyzer}
 Wie der Simple Analyzer ist der Whitespace Analyzer sehr einfach aufgebaut. Der Text wird in diesem Fall nicht einfach nach Nicht-Buchstaben durchsucht, sondern die Tokens werden aus den Leerschlägen (Whitespaces) im Text erstellt. Wieder am Beispiel von X\&Y xy@zawh.ch würde er X\&Y und xy@zhaw.ch erkennen. Allerdings hat er, wie der Simple Analyzer das Problem, dass keine Stopp-Wörter erkennt werden. Das heisst, unwichtige Wörter wie \textquotedblleft und\textquotedblright werden ebenfalls in den Index aufgenommen. Da diese Füllwörter sehr häufig vorkommen, könnten sie im Index eine höhere Gewichtung erhalten, ohne dass sie wirklich Informationen über den Text oder die Datei liefern.
 \newpage
@@ -448,9 +449,9 @@ Als Erstes muss gesagt werden, dass Lucene eine sehr positive Überraschung war.
 \\
 Als zweiter Punkt ist die Abschätzung des Anwendungsbereichs wichtig. Schnelle Indexierung oder schnelle Suchergebnisse sind ein Aspekt des Anwendungsbereiches. Eine einfache Antwort ergibt sich aus der Erkenntnis, dass Endbenutzer die Suchmaschine benutzen sollen. In unserem Beispiel würde ich also zum Standard Analyzer raten. Er lieferte ein gutes Suchergebnis in einer guten Zeit. Liegt der Fokus aber nicht in einer sehr guten Suchmaschine, sondern nur in der Unterstützung (zum Beispiel für ein Intranet in einem Geschäft) des Benutzers, ist es wichtiger, dass die Indexierung schnell durchläuft. Da der zweite Anwendungsfall darauf hinausläuft, dass die Indexierung immer wieder durchgeführt wird. Da ist ein schneller Durchlauf höher gewichtet, als die effektive Suchleistung. In solch einem Fall würde ich doch eher zum Whitespace Analyzer raten.\\
 \\
-Information Retrieval ist ein komplexes Thema. In Verbindung mit Lucene könnte man komplette Bücher schreiben (wie dies ja auch geschehen ist). Lucene hat seine Arbeit sauber ausgeführt, auch die Erkennung von MP3-Dateien war gut zu implementieren. Obwohl Lucene optimiert wurde für Textdateien, konnte mit der Hilfe vom JAudioTagger die Aufgabe gut gelöst werden. Lucene ist ein sehr mächtiges Tool. Aber es muss vorab gut analysiert werden, wie die Suchmaschine eingesetzt werde soll.\\
+Information Retrieval ist ein komplexes Thema. In Verbindung mit Lucene könnte man komplette Bücher schreiben (wie dies ja auch geschehen ist). Lucene hat seine Arbeit sauber ausgeführt, auch die Erkennung von MP3-Dateien war gut zu implementieren. Obwohl Lucene  für Textdateien optimiert wurde, konnte mit der Hilfe vom JAudioTagger die Aufgabe gut gelöst werden. Lucene ist ein sehr mächtiges Tool,  aber es muss vorab gut analysiert werden, wie die Suchmaschine eingesetzt werde soll.\\
 \\
-Die Indexierung von Ton hingegen ist nochmals ein ganz anderes Thema. Akustischer Fingerabdruck und spektrale Flachheit sind nur kleine Einblicke in ein ganz grosses Themengebiet der Akustik. Aber das Beispiel von Shazam zeigt schön, wie genial die Idee ist, die die Hersteller bedient haben. Mit mehr als 400 Millionen Benutzern haben sie ein Bedürfnis entdeckt. Mit Shazam wurde ein einfaches, zuverlässiges Top-App gebaut.
+Die Indexierung von Ton hingegen ist nochmals ein ganz anderes Thema. Akustischer Fingerabdruck und spektrale Flachheit sind nur kleine Einblicke in ein ganz grosses Themengebiet der Akustik. Das Beispiel von Shazam zeigt schön, wie genial die Idee ist, die die Hersteller  hatten. Mit mehr als 400 Millionen Benutzern haben sie ein Bedürfnis entdeckt. Mit Shazam wurde ein einfaches, zuverlässiges Top-App gebaut.
 \chapter*{Glossar}
 \textbf{MP3}\\
 Bezeichnung für MPEG-1 Audio Layer III oder MPEG-2 Audio Layer III. Ist ein Verfahren der verlustbehafteten Kompression.\\ \\
@@ -467,7 +468,7 @@ Analysiert und wandelt eine Eingabe in ein anderes, für die Weiterverarbeitung 
 \textbf{Offset}\\
 Bezeichnet den Abstand zum Beginn innerhalb einer Datei auf Byte-Ebene. \\ \\ 
 \textbf{Solid State Disk} \\
-Ist eine Harddisk, welche ohne beweglichen Teile auskommt und eine sehr hohe Lese- und Schreibgeschwindigkeit besitzt.
+Ist eine Harddisk, welche ohne bewegliche Teile auskommt und eine sehr hohe Lese- und Schreibgeschwindigkeit besitzt.
 \bibliography{document}
 \bibliographystyle{plain}
 \nocite{jaudiotagger}
@@ -485,7 +486,7 @@ Ist eine Harddisk, welche ohne beweglichen Teile auskommt und eine sehr hohe Les
 \nocite{query}
 \nocite{modinf}
 \nocite{lucene2}
-\begin{appendices}
+\begin{appendices} 
 \inputencoding{latin1}
 \chapter{Main.java}
 \lstinputlisting{../Search_Engine/src/ch/phischa/Main.java}
